@@ -32,11 +32,11 @@
     </profile>
 	
 	<profile>
-     <id>snapshot</id>
+     <id>Repo-snapshot</id>
      <repositories>
        <repository>
-         <id>nexus-snapshot-repo</id>
-         <name>devops-timesheet</name>
+         <id>Repo-snapshot</id>
+         <name>Repo-snapshot</name>
          <url>http://localhost:8081/repository/maven-snapshots/</url>
        </repository>
 	   
