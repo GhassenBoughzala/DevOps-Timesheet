@@ -15,19 +15,16 @@ pipeline {
 				}				
 			}
 
-			stage('Deploy'){
+			stage('Deploy Nexus'){
 				steps{
 					bat "mvn package"
 					bat "mvn deploy"
 				}				
 			}
 
-			stage('Sonar'){
+			stage('Sonar Analyse'){
 				steps{
-                    script{
-                      withSonarQubeEnv('sonarserver') { 
-                      sh "mvn sonar:sonar"
-                       }
+                    bat "mvn sonar:sonar"
                   }
                 }
 			} 
