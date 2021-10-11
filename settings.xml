@@ -7,7 +7,7 @@
   <servers>
 
     <server>
-      <id>nexus-snapshots</id>
+      <id>nexus</id>
       <username>admin</username>
       <password>123456</password>
     </server>
@@ -32,12 +32,12 @@
     </profile>
 	
 	<profile>
-     <id>Repo-snapshot</id>
+     <id>snapshot</id>
      <repositories>
        <repository>
-         <id>Repo-snapshot</id>
-         <name>Repo-snapshot</name>
-         <url>http://localhost:8081/repository/maven-snapshots/</url>
+         <id>snapshots</id>
+         <name>snapshots</name>
+         <url>http://localhost:8081/repository/snapshots/</url>
        </repository>
 	   
      </repositories>
@@ -46,9 +46,9 @@
      <id>release</id>
      <repositories>
        <repository>
-         <id>devops-timesheet</id>
-         <name>your custom repo</name>
-         <url>http://localhost:8081/repository/maven-releases/</url>
+         <id>realses</id>
+         <name>realses</name>
+         <url>http://localhost:8081/repository/realses/</url>
        </repository>
      </repositories>
    </profile>
