@@ -15,13 +15,6 @@ pipeline {
 				}				
 			}
 
-			stage('Deploy Nexus'){
-				steps{
-					bat "mvn package"
-					bat "mvn deploy"
-				}				
-			}
-
 			stage('Sonar Analyse'){
 				steps{
                     bat "mvn sonar:sonar"
