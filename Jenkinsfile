@@ -3,14 +3,9 @@ pipeline {
 
 	stages{
 
-			stage('Clean'){
+			stage('Clean & Test'){
 				steps{
 					bat "mvn clean"
-				}				
-			}
-
-			stage('Test'){
-				steps{
 					bat "mvn test"
 				}				
 			}
