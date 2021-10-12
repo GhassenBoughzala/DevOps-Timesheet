@@ -20,6 +20,12 @@ pipeline {
                     bat "mvn sonar:sonar"
                   }
             }
+
+            stage('Nexus Deploy'){
+				steps{
+					bat "mvn deploy"
+				}				
+			}
 		} 
 
 }
