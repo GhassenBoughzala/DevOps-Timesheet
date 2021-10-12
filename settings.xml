@@ -37,7 +37,7 @@
        <repository>
          <id>snapshots</id>
          <name>snapshots</name>
-         <url>http://localhost:8081/repository/snapshots/</url>
+         <url>http://localhost:8081/repository/maven-snapshots/</url>
        </repository>
 	   
      </repositories>
@@ -48,7 +48,7 @@
        <repository>
          <id>realses</id>
          <name>realses</name>
-         <url>http://localhost:8081/repository/realses/</url>
+         <url>http://localhost:8081/repository/maven-realses/</url>
        </repository>
      </repositories>
    </profile>
