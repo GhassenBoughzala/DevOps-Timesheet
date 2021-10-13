@@ -3,23 +3,27 @@ pipeline {
 
 	stages{
 
-			stage('Clean'){
+			stage('Clean and test'){
 				steps{
 					bat "mvn clean"
-				}				
-			}
-
-			stage('Test'){
-				steps{
 					bat "mvn test"
+
 				}				
 			}
 
+		
 			stage('Sonar Analyse'){
 				steps{
                     bat "mvn sonar:sonar"
                   }
             }
+			
+			stage('Deploy'){
+				steps{
+				bat "mvn deploy"
+
+				}				
+			}
 		} 
 
 }
