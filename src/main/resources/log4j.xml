@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+	"http://logging.apache.org/log4j/docs/api/org/apache/log4j/xml/log4j.dtd"
+	"http://logging.apache.org/log4j/docs/api/org/apache/log4j/xml/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Configuration de l'affichage sur la Console -->
+	<!-- %d{yyyy-MM-dd HH:mm:ss} : Format de la date -->
+	<!-- %d le timestamp de l'émission du message -->
+	<!-- %l le nom de la classe qui a émis le message -->
+	<!-- %L la ligne -->
+	<!-- %m le message -->
+	<!-- %n un retour chariot -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p] %C:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Confighuration de l'affichage dns le fichier de logs -->
+	<!-- append=false: pour écraser les anciens logs près chaque redémarrage -->
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="append" value="true" />
+		<param name="maxFileSize" value="2KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="file" value="C:/logs/formation/log4j-demo.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%-5p] %l:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Niveau de log : DEBEUG -->
+	<!-- Les logs sont reversés sur la Console et dans un fichier -->
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+
+</log4j:configuration>
