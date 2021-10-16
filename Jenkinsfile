@@ -3,14 +3,9 @@ pipeline {
 
 	stages{
 
-			stage('Clean'){
+			stage('Clean & Test'){
 				steps{
 					bat "mvn clean"
-				}				
-			}
-
-			stage('Test'){
-				steps{
 					bat "mvn test"
 				}				
 			}
@@ -20,6 +15,12 @@ pipeline {
                     bat "mvn sonar:sonar"
                   }
             }
+
+            stage('Nexus Deploy'){
+				steps{
+					bat "mvn deploy"
+				}				
+			}
 		} 
 
 }
