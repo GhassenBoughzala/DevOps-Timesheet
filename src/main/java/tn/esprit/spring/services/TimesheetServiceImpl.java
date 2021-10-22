@@ -58,13 +58,10 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		Optional <Mission>  missionOp = missionRepository.findById(missionId);
 		Optional <Departement>  depOp = deptRepoistory.findById(depId);
 
-		Mission mission = new Mission();
-		Departement dep = new Departement();
-
 		if(depOp.isPresent()){
-			dep = depOp.get();
+			Departement dep = depOp.get();
 			if(missionOp.isPresent()){
-				mission = missionOp.get();
+				Mission mission = missionOp.get();
 				mission.setDepartement(dep);
 				missionRepository.save(mission);			
 			}
@@ -78,7 +75,6 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		Optional<Employe> validateurOp = employeRepository.findById(validateurId);
 		Optional<Mission> missionOp = missionRepository.findById(missionId);
 		Employe employeva = new Employe();
-		Mission mission = new Mission();
 		//verifier s'il est un chef de departement (interet des enum)
 		if(validateurOp.isPresent()){
 			employeva = validateurOp.get();
@@ -92,8 +88,8 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		boolean chefDeLaMission = false;
 		for(Departement dep : employeva.getDepartements()){
 			if(missionOp.isPresent()){
-				mission = missionOp.get();
-				if(dep.getId() == mission.getDepartement().getId()){
+				Mission mission = missionOp.get();
+				if(dep.getId() ==  mission.getDepartement().getId()){
 					chefDeLaMission = true;
 					break;
 				}
@@ -109,7 +105,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		Timesheet timesheet =timesheetRepository.findBytimesheetPK(timesheetPK);
 		timesheet.setValide(true);
 		
-		//Comment Lire une date de la base de données
+		//Comment Lire une date de l base de données
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		l.info("dateDebut : " + dateFormat.format(timesheet.getTimesheetPK().getDateDebut()));
 		
