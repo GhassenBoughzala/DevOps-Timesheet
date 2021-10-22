@@ -4,7 +4,7 @@ pipeline {
 
         registry = "ghassenbogh/devopstimesheet" 
         registryCredential = 'dockerHub'
-        dockerImage = 'devops-timesheet' 
+        dockerImage = '' 
     }
 
     agent any 
