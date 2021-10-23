@@ -9,6 +9,12 @@ pipeline {
     }
 
 	stages{
+			stage('Clean Package'){
+					steps{
+						bat "mvn clean package"
+					}				
+				}
+			
 
 			stage('Building Image'){
 				steps{
