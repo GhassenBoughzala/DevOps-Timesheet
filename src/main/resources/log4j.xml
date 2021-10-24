@@ -5,6 +5,7 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
 	<!-- Configuration de l'affichage sur la Console -->
+	<!-- Levels : FATAL - ERROR - WARN - INFO - DEBUG - TRACE -->
 	<!-- %d{yyyy-MM-dd HH:mm:ss} : Format de la date -->
 	<!-- %d le timestamp de l'émission du message -->
 	<!-- %l le nom de la classe qui a émis le message -->

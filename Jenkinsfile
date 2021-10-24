@@ -1,15 +1,46 @@
-pipeline {
-	agent any
+pipeline {	
+
+	agent any 
+	
+	environment { 
+        registry = "ghassenbogh/devopstimesheet" 
+        registryCredential = 'dockerHub'
+        dockerImage = '' 
+    }
 
 	stages{
+			stage('Clean Package'){
+					steps{
+						bat "mvn clean package"
+					}				
+				}
+			
 
+			stage('Building Image'){
+				steps{
+					script{
+						dockerImage = docker.build registry + ":$BUILD_NUMBER"
+					}
+				}				
+			}
+
+			stage('Deploy Image'){
+				steps{
+					script{
+						docker.withRegistry( '', registryCredential ) 
+                        {dockerImage.push()}
+					}
+				}
+			}					
+							
+			/*
 			stage('Clean & Test'){
 				steps{
 					bat "mvn clean"
 					bat "mvn test"
 				}				
 			}
-
+			*/
 			stage('Sonar Analyse'){
 				steps{
                     bat "mvn sonar:sonar"
@@ -21,6 +52,7 @@ pipeline {
 					bat "mvn deploy"
 				}				
 			}
-		} 
+			
+		}
+	} 
 
-}
