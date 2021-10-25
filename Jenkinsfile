@@ -32,15 +32,7 @@ pipeline {
 					}
 				}
 			}					
-							
-			/*
-			stage('Clean & Test'){
-				steps{
-					bat "mvn clean"
-					bat "mvn test"
-				}				
-			}
-			*/
+			
 			stage('Sonar Analyse'){
 				steps{
                     bat "mvn sonar:sonar"

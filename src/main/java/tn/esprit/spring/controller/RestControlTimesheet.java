@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
+import tn.esprit.spring.entities.MissionDTO;
+import tn.esprit.spring.services.IDepartementService;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.ITimesheetService;
@@ -27,13 +30,27 @@ public class RestControlTimesheet {
 	IEntrepriseService ientrepriseservice;
 	@Autowired
 	ITimesheetService itimesheetservice;
+	@Autowired
+	IDepartementService idepartementService;
 	
 	// http://localhost:8081/SpringMVC/servlet/ajouterMission
 	@PostMapping("/ajouterMission")
 	@ResponseBody
-	public int ajouterMission(@RequestBody Mission mission) {
-		itimesheetservice.ajouterMission(mission);
-		return mission.getId();
+	public int ajouterMission(@RequestBody MissionDTO missionDTO) {
+		Mission persistentMission = mapIntoPersistentMission(missionDTO);
+		itimesheetservice.ajouterMission(persistentMission);
+		return persistentMission.getId();
+	}
+
+	public Mission mapIntoPersistentMission(MissionDTO missionDTO) {
+		Mission persistentMission = new Mission();
+		Departement departement = idepartementService.findById(missionDTO.getDepartementId());
+		persistentMission.setId(missionDTO.getId());
+		persistentMission.setName(missionDTO.getName());
+		persistentMission.setDescription(missionDTO.getDescription());
+		persistentMission.setDepartement(departement);
+		persistentMission.setTimesheets(missionDTO.getTimesheets());
+		return persistentMission;
 	}
 
 	// http://localhost:8081/SpringMVC/servlet/affecterMissionADepartement/4/4
