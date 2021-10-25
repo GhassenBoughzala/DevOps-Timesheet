@@ -44,12 +44,12 @@ public class RestControlTimesheet {
 
 	public Mission mapIntoPersistentMission(MissionDTO missionDTO) {
 		Mission persistentMission = new Mission();
-		Departement departement = idepartementService.findById(missionDTO.getDepartementId());
-		persistentMission.setId(missionDTO.getId());
-		persistentMission.setName(missionDTO.getName());
-		persistentMission.setDescription(missionDTO.getDescription());
+		Departement departement = idepartementService.findById(missionDTO.getDepartementIdDTO());
+		persistentMission.setId(missionDTO.getIdDTO());
+		persistentMission.setName(missionDTO.getNameDTO());
+		persistentMission.setDescription(missionDTO.getDescriptionDTO());
 		persistentMission.setDepartement(departement);
-		persistentMission.setTimesheets(missionDTO.getTimesheets());
+		persistentMission.setTimesheets(missionDTO.getTimesheetsDTO());
 		return persistentMission;
 	}
 
