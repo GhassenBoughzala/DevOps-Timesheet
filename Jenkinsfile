@@ -17,6 +17,18 @@ pipeline {
 				}				
 			}
 
+			stage('Sonar'){
+				steps{
+                   bat "mvn sonar:sonar"
+                }
+			} 
+
+			stage('Deploy'){
+				steps{
+					bat "mvn deploy"
+				}				
+			}
+
 			stage('Building Image'){
 				steps{
 					script{
@@ -34,17 +46,7 @@ pipeline {
 				}
 			}
 
-			/*stage('Sonar'){
-				steps{
-                   bat "mvn sonar:sonar"
-                }
-			} 
-
-			stage('Deploy'){
-				steps{
-					bat "mvn deploy"
-				}				
-			}*/
+			
 
 		
 
