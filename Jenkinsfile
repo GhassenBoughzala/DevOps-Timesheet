@@ -9,13 +9,24 @@ pipeline {
 
 		stages{
 
-			stage('Clean and package'){
+			stage('Clean Package'){
+					steps{
+						bat "mvn clean package"
+					}				
+				}
+				
+			stage('Sonar Analyse'){
 				steps{
-					bat "mvn clean package"
-					
+                    bat "mvn sonar:sonar"
+                  }
+            }
+
+            stage('Nexus Deploy'){
+				steps{
+					bat "mvn deploy"
 				}				
 			}
-
+			
 			stage('Building Image'){
 				steps{
 					script{
@@ -31,13 +42,6 @@ pipeline {
                         {dockerImage.push()}
 					}
 				}
-			}
-
-			/*stage('Sonar'){
-				steps{
-                   bat "mvn sonar:sonar"
-                }
-			}*/
-
+			}	
 	}
 }
