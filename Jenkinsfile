@@ -14,8 +14,19 @@ pipeline {
 						bat "mvn clean package"
 					}				
 				}
-			
+				
+			stage('Sonar Analyse'){
+				steps{
+                    bat "mvn sonar:sonar"
+                  }
+            }
 
+            stage('Nexus Deploy'){
+				steps{
+					bat "mvn deploy"
+				}				
+			}
+			
 			stage('Building Image'){
 				steps{
 					script{
@@ -31,26 +42,6 @@ pipeline {
                         {dockerImage.push()}
 					}
 				}
-			}					
-							
-			/*
-			stage('Clean & Test'){
-				steps{
-					bat "mvn clean"
-					bat "mvn test"
-				}				
-			}
-			*/
-			stage('Sonar Analyse'){
-				steps{
-                    bat "mvn sonar:sonar"
-                  }
-            }
-
-            stage('Nexus Deploy'){
-				steps{
-					bat "mvn deploy"
-				}				
 			}
 			
 		}
