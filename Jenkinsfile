@@ -37,7 +37,7 @@ pipeline {
 				steps{
                    bat "mvn sonar:sonar"
                 }
-			}
+			}*/
 
-}
+	}
 }
