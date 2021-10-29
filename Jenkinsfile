@@ -7,7 +7,7 @@ pipeline {
         dockerImage = '' 
     }
 
-stages{
+		stages{
 
 			stage('Clean and package'){
 				steps{
@@ -38,3 +38,6 @@ stages{
                    bat "mvn sonar:sonar"
                 }
 			}
+
+}
+}
