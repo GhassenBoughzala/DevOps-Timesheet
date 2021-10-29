@@ -1,29 +1,40 @@
 pipeline {
-	agent any
+	agent any 
+	
+	environment { 
+        registry = "amiryazidi/devopstimesheet" 
+        registryCredential = 'dockerHub'
+        dockerImage = '' 
+    }
 
-	stages{
+stages{
 
-			stage('Clean and test'){
+			stage('Clean and package'){
 				steps{
-					bat "mvn clean"
-					bat "mvn test"
-
+					bat "mvn clean package"
+					
 				}				
 			}
 
-		
-			stage('Sonar Analyse'){
+			stage('Building Image'){
 				steps{
-                    bat "mvn sonar:sonar"
-                  }
-            }
-			
-			stage('Deploy'){
-				steps{
-				bat "mvn deploy"
-
+					script{
+						dockerImage = docker.build registry + ":$BUILD_NUMBER"
+					}
 				}				
 			}
-		} 
 
-}
+			stage('Deploy Image'){
+				steps{
+					script{
+						docker.withRegistry( '', registryCredential ) 
+                        {dockerImage.push()}
+					}
+				}
+			}
+
+			/*stage('Sonar'){
+				steps{
+                   bat "mvn sonar:sonar"
+                }
+			}
