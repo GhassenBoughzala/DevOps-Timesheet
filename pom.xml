@@ -210,7 +210,7 @@
     </snapshotRepository>
     <repository>
       <id>nexus</id>
-      <url>http://localhost:8081/repository/maven-realses/</url>
+      <url>http://localhost:8081/repository/maven-realeases/</url>
     </repository>
   </distributionManagement>
 
