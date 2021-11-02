@@ -33,7 +33,7 @@
 	<!-- Niveau de log : DEBEUG -->
 	<!-- Les logs sont reversés sur la Console et dans un fichier -->
 	<root>
-		<level value="INFO" />
+		<level value="DEBUG" />
 		<appender-ref ref="console" />
 		<appender-ref ref="file" />
 	</root>

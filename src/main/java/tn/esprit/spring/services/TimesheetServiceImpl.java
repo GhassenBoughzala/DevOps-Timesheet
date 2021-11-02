@@ -79,7 +79,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		if(validateurOp.isPresent()){
 			employeva = validateurOp.get();
 			if(!employeva.getRole().equals(Role.CHEF_DEPARTEMENT)){
-				l.error("l'employe doit etre chef de departement pour valider une feuille de temps !");
+				l.info("l'employe doit etre chef de departement pour valider une feuille de temps !");
 			return;
 			}
 		}
@@ -97,15 +97,13 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		}
 		
 		if(!chefDeLaMission){
-			l.error("l'employe doit etre chef de departement de la mission en question");
+			l.info("l'employe doit etre chef de departement de la mission en question");
 			return;
 		}
 //
 		TimesheetPK timesheetPK = new TimesheetPK(missionId, employeId, dateDebut, dateFin);
-		Timesheet timesheet =timesheetRepository.findBytimesheetPK(timesheetPK);
+		Timesheet timesheet =timesheetRepository.findByTimesheetPK(timesheetPK);
 		timesheet.setValide(true);
-		
-		//Comment Lire une date de l base de données
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		l.info("dateDebut : " + dateFormat.format(timesheet.getTimesheetPK().getDateDebut()));
 		
@@ -121,4 +119,9 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		return timesheetRepository.getAllEmployeByMission(missionId);
 	}
 
+	public List<Timesheet> getTimesheetsByMissionAndDate
+	(Employe employe, Mission mission, Date dateDebut,Date dateFin) {
+
+		return (timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin));
+	}
 }
