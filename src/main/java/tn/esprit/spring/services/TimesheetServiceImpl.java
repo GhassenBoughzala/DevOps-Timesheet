@@ -5,7 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,13 +33,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	TimesheetRepository timesheetRepository;
 	@Autowired
 	EmployeRepository employeRepository;
-	private static final Logger l = Logger.getLogger (TimesheetServiceImpl.class );
-	public int ajouterMission(Mission mission) {
-		missionRepository.save(mission);
-		return mission.getId();
-	}
-    
-
+	private static final Logger l = LogManager.getLogger(TimesheetServiceImpl.class);
 
 	public void ajouterTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin) {
 		TimesheetPK timesheetPK = new TimesheetPK();
@@ -54,20 +49,6 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		
 	}
 
-	public void affecterMissionADepartement(int missionId, int depId) {
-		Optional <Mission>  missionOp = missionRepository.findById(missionId);
-		Optional <Departement>  depOp = deptRepoistory.findById(depId);
-
-		if(depOp.isPresent()){
-			Departement dep = depOp.get();
-			if(missionOp.isPresent()){
-				Mission mission = missionOp.get();
-				mission.setDepartement(dep);
-				missionRepository.save(mission);			
-			}
-		}		
-		
-	}
 	
 	public void validerTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin, int validateurId) {
 		
@@ -107,16 +88,6 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		l.info("dateDebut : " + dateFormat.format(timesheet.getTimesheetPK().getDateDebut()));
 		
-	}
-
-	
-	public List<Mission> findAllMissionByEmployeJPQL(int employeId) {
-		return timesheetRepository.findAllMissionByEmployeJPQL(employeId);
-	}
-
-	
-	public List<Employe> getAllEmployeByMission(int missionId) {
-		return timesheetRepository.getAllEmployeByMission(missionId);
 	}
 
 	public List<Timesheet> getTimesheetsByMissionAndDate
