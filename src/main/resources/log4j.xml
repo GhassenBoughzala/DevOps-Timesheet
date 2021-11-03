@@ -3,24 +3,19 @@
 <!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd"> <log4j:configuration
 	xmlns:log4j="http://jakarta.apache.org/log4j/">
 
-	<appender name="console"
-		class="org.apache.log4j.ConsoleAppender">
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
 		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern"
-			value="%d{yyyy-MM-dd HH:mm:ss} %l:%L - %m%n" />
+			<param name="ConversionPattern"	value="%d{yyyy-MM-dd HH:mm:ss} %l:%L - %m%n" />
 		</layout>
 	</appender>
-	<appender name="file"
-		class="org.apache.log4j.RollingFileAppender">
-
+	
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
 		<param name="append" value="false" />
 		<param name="maxFileSize" value="1KB" />
 		<param name="maxBackupIndex" value="3" />
-		<param name="file" value="C:/logs/formation.log" />
+		<param name="file" value="C:/logs/timesheet.log" />
 		<layout class="org.apache.log4j.PatternLayout">
-		<param name="ConversionPattern"
-
-				value="%d{yyyy-MM-dd HH:mm:ss} %l:%L - %m%n" />
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %l:%L - %m%n" />
 		</layout>
 
 	</appender>
