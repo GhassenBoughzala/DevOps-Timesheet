@@ -5,6 +5,7 @@ import java.util.List;
 
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
+import tn.esprit.spring.entities.MissionDTO;
 
 public interface IMissionService {
 

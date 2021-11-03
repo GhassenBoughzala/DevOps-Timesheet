@@ -12,12 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Mission;
+import tn.esprit.spring.entities.MissionDTO;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
 import tn.esprit.spring.services.IMissionService;
 import tn.esprit.spring.services.ITimesheetService;
+import tn.esprit.spring.services.IDepartementService;
 
 @RestController
 public class RestControlTimesheet {
@@ -31,14 +34,28 @@ public class RestControlTimesheet {
 	ITimesheetService itimesheetservice;
 	@Autowired
 	IMissionService imissionservice;
+	@Autowired
+	IDepartementService idepartementService;
 	
 	@PostMapping("/ajouterMission")
 	@ResponseBody
-	public int ajouterMission(@RequestBody Mission mission) {
-		imissionservice.ajouterMission(mission);
-		return mission.getId();
+	public int ajouterMission(@RequestBody MissionDTO missionDTO) {
+		Mission persistentMission = mapIntoPersistentMission(missionDTO);
+		imissionservice.ajouterMission(persistentMission);
+		return persistentMission.getId();
 	}
-
+	
+	public Mission mapIntoPersistentMission(MissionDTO missionDTO) {
+		Mission persistentMission = new Mission();
+		Departement departement = idepartementService.findById(missionDTO.getDepartementIdDTO());
+		persistentMission.setId(missionDTO.getIdDTO());
+		persistentMission.setName(missionDTO.getNameDTO());
+		persistentMission.setDescription(missionDTO.getDescriptionDTO());
+		persistentMission.setDepartement(departement);
+		persistentMission.setTimesheets(missionDTO.getTimesheetsDTO());
+		return persistentMission;
+	}
+	
 	@PutMapping(value = "/affecterMissionADepartement/{idmission}/{iddept}") 
 	public void affecterMissionADepartement(@PathVariable("idmission") int missionId, @PathVariable("iddept") int depId) {
 		imissionservice.affecterMissionADepartement(missionId, depId);
