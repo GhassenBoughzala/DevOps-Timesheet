@@ -7031,3 +7031,12 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2021-11-05 14:36:08.334  INFO 9232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2021-11-05 14:36:10.037  WARN 9232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2021-11-05 14:36:10.722  INFO 9232 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 9.34 seconds (JVM running for 11.16)
+2021-11-05 14:43:29.640  INFO 7468 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 7468 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-05 14:43:29.642  INFO 7468 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
+2021-11-05 14:43:32.004  INFO 7468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-05 14:43:32.194  INFO 7468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2021-11-05 14:43:32.528  INFO 7468 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-05 14:43:33.308  INFO 7468 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-05 14:43:34.814  INFO 7468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-05 14:43:36.581  WARN 7468 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-05 14:43:37.498  INFO 7468 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 8.615 seconds (JVM running for 10.601)
