@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.IEmployeService;
@@ -48,5 +49,13 @@ public class ControllerEntrepriseImpl{
 	public void deleteDepartementById(int depId) {
 		ientrepriseservice.deleteDepartementById(depId);
 
+	}
+	public List<Departement> getAllDepartements() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public List<Contrat> getAllContrats() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
