@@ -1,12 +1,12 @@
 package tn.esprit.spring.services;
-
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.transaction.annotation.Transactional;
-
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.repository.DepartementRepository;
@@ -19,7 +19,7 @@ public class DepartementServiceImpl implements IDepartementService {
     EntrepriseRepository entrepriseRepoistory;
 	@Autowired
 	DepartementRepository deptRepoistory;
-	
+	private static final Logger l = LogManager.getLogger(DepartementServiceImpl.class);
 
 	public int ajouterDepartement(Departement dep) {
 		deptRepoistory.save(dep);
@@ -43,18 +43,34 @@ public class DepartementServiceImpl implements IDepartementService {
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
 		Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).get();
 		List<String> depNames = new ArrayList<>();
+		l.info("In getAllDepartements()");
 		for(Departement dep : entrepriseManagedEntity.getDepartements()){
 			depNames.add(dep.getName());
 		}
 		
 		return depNames;
 	}
-
 	
-
 	@Transactional
-	public void deleteDepartementById(int depId) {
-		deptRepoistory.delete(deptRepoistory.findById(depId).get());	
+	public Integer deleteDepartementById(int depId) {
+		try {
+			l.info("In deleteDepartementById()");
+			Optional<Departement> departement=deptRepoistory.findById(depId);
+			if(departement.isPresent()) {
+			l.debug("je vais supprimer le département par son id:"+depId);
+		    deptRepoistory.delete(departement.get());
+			l.debug("Département supprimé avec succés");
+			l.info("Out deleteDepartementById()");
+			}
+			return 1;
+			
+		}
+		catch (Exception e) {
+			l.error("erreur dans la methode deleteDepartementById() :"+e);
+			return 0;
+		}
+
+		 
 	}
 
 
