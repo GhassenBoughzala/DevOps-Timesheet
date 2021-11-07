@@ -26,19 +26,39 @@ public class DepartementServiceImpl implements IDepartementService {
 		return dep.getId();
 	}
 	
-	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
-		//Le bout Master de cette relation N:1 est departement  
-				//donc il faut rajouter l'entreprise a departement 
-				// ==> c'est l'objet departement(le master) qui va mettre a jour l'association
-				//Rappel : la classe qui contient mappedBy represente le bout Slave
-				//Rappel : Dans une relation oneToMany le mappedBy doit etre du cote one.
-				Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).get();
-				Departement depManagedEntity = deptRepoistory.findById(depId).get();
+	//Affectation d'une département à une entreprise
+		public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
+			         try {
+
+
+						l.info("In affecterDepartementAEntreprise()");
+						l.debug("Je vais récupérer le département par son id");
+						Optional<Departement> departementManaged=deptRepoistory.findById(depId);
+							l.debug("Je vais récupérer l'entreprise par son id");
+							Optional<Entreprise> entrpriseManaged=entrepriseRepoistory.findById(entrepriseId);	
+			        	 if(departementManaged.isPresent() && entrpriseManaged.isPresent()) {	
+
+						l.debug("je vais récupérer l'entreprise par son id");
+						l.debug("entreprise récupérée avec succés avec une référence :"+entrpriseManaged.get().getId());
+						l.debug("je vais récupérer le departement par son id");
+						Departement depManagedEntity = departementManaged.get();
+						l.debug("je vais affecter l'entreprise récupérer au département ");
+						depManagedEntity.setEntreprise(entrpriseManaged.get());
+						l.debug("entreprise affectée à l'entreprise avec succés dont l'id est de département est"+depManagedEntity.getId());
+						deptRepoistory.save(depManagedEntity);	
+						l.debug("entreprise est affectée a l'entreprise avec succées,id de département est   = "+depManagedEntity.getId());
+						l.info("Out ajouterDepartement()");
+						
+							}
+					}
+					catch (Exception e) {
+						l.error("erreur dans la methode affecterDepartementAEntreprise() :"+e);
+
+					}
 				
-				depManagedEntity.setEntreprise(entrepriseManagedEntity);
-				deptRepoistory.save(depManagedEntity);
-		
-	}
+					
+			      
+		}
 	
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
 		Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).get();
