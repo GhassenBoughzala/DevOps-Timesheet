@@ -11,6 +11,7 @@
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
 	<version>2.6.2-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>timesheet</name>
 	<description>timesheet</description>
 <!-- Hello Webhook -->
@@ -20,6 +21,7 @@
 		<sonar.projectKey>DevOps-Timesheet</sonar.projectKey>
  		<sonar.qualitygate.wait>true</sonar.qualitygate.wait>
  		<sonar.projectKey>GhassenBoughzala_DevOps-Timesheet_AXxXbz8OxF4izpYwktpC</sonar.projectKey>
+ 		<start-class>tn.esprit.spring.TimesheetApplication</start-class>
 	</properties>
 
 	<dependencies>

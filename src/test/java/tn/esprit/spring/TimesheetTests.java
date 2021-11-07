@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import junit.framework.Assert;
 import tn.esprit.spring.entities.Timesheet;
 import tn.esprit.spring.repository.EmployeRepository;
 import tn.esprit.spring.repository.MissionRepository;
@@ -42,19 +43,22 @@ public class TimesheetTests {
 	
 	@Test
 	public void affichage() throws ParseException{
-		int i=0; 
+		
 		Long num=timesheetRepository.count();
 		logger.info("there are "+num.intValue() +" timesheets in total");
-	List<Timesheet> lt=timesheetService.getTimesheetsByMissionAndDate
-			(employeRepository.findById(1).get(), missionRepository.findById(1).get(), format.parse("2020/00/00"), format.parse("2021/00/00"));
+		List<Timesheet> lt=timesheetService.getTimesheetsByMissionAndDate(
+					employeRepository.findById(1).get(), 
+					missionRepository.findById((long) 1).get(), 
+					format.parse("2020/00/00"), 
+					format.parse("2021/00/00"));
 	assertNotNull(lt);
-	for (Timesheet t:lt)
+	/*for (Timesheet t:lt)
 	{String valide="NOT VALID";
 	i++;
 	if (t.isValide())
 		valide="VALID";
 			logger.info("timesheet "+i +" Mission "+ missionRepository.findById(1).get().getName()+ " has employee  "+t.getEmploye().getNom()+" "+t.getEmploye().getPrenom()+ " working from " +t.getTimesheetPK().getDateDebut() + " to " +t.getTimesheetPK().getDateFin()+"======"+valide);}
-		
+		*/
 	}
 	
 

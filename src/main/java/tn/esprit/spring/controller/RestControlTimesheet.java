@@ -41,7 +41,7 @@ public class RestControlTimesheet {
 	@ResponseBody
 	public int ajouterMission(@RequestBody MissionDTO missionDTO) {
 		Mission persistentMission = mapIntoPersistentMission(missionDTO);
-		imissionservice.ajouterMission(persistentMission);
+		imissionservice.addMission(persistentMission);
 		return persistentMission.getId();
 	}
 	

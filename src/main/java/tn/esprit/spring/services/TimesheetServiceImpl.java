@@ -1,6 +1,5 @@
 package tn.esprit.spring.services;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -54,7 +53,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		
 		l.info("In valider Timesheet");
 		Optional<Employe> validateurOp = employeRepository.findById(validateurId);
-		Optional<Mission> missionOp = missionRepository.findById(missionId);
+		Optional<Mission> missionOp = missionRepository.findById((long) missionId);
 		Employe employeva = new Employe();
 		//verifier s'il est un chef de departement (interet des enum)
 		if(validateurOp.isPresent()){
@@ -85,8 +84,6 @@ public class TimesheetServiceImpl implements ITimesheetService {
 		TimesheetPK timesheetPK = new TimesheetPK(missionId, employeId, dateDebut, dateFin);
 		Timesheet timesheet =timesheetRepository.findByTimesheetPK(timesheetPK);
 		timesheet.setValide(true);
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		l.info("dateDebut : " + dateFormat.format(timesheet.getTimesheetPK().getDateDebut()));
 		
 	}
 
