@@ -10,11 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import tn.esprit.spring.controller.ControllerEmployeImpl;
 import tn.esprit.spring.controller.ControllerEntrepriseImpl;
 import tn.esprit.spring.controller.RestControlEmploye;
-import tn.esprit.spring.entities.Contrat;
 import tn.esprit.spring.entities.Departement;
-import tn.esprit.spring.entities.Employe;
 import tn.esprit.spring.entities.Entreprise;
-import tn.esprit.spring.entities.Role;
+
 
 @SpringBootTest
 class TimesheetApplicationTests {
