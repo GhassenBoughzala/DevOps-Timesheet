@@ -70,6 +70,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		}
 	}
 
+	
 	@Transactional
 	public int deleteEntrepriseById(int entrepriseId) {
 		l.debug("methode deleteEntrepriseById ");
@@ -102,6 +103,27 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		}	
 		
 		
+	}
+
+	public Entreprise updateEntreprise(Entreprise e) {
+		return entrepriseRepoistory.save(e);
+	}
+
+	public List<Entreprise> retrieveAllEntreprises() {
+		List<Entreprise> entreprises = null; 
+		try {
+	
+			l.info("In retrieveAllEntreprises() : ");
+			entreprises = (List<Entreprise>) entrepriseRepoistory.findAll();  
+			for (Entreprise entreprise : entreprises) {
+				l.debug("entreprise +++ : " + entreprise);
+			} 
+			l.info("Out of retrieveAllEntreprises() : ");
+		}catch (Exception e) {
+			l.error("Error in retrieveAllEntreprises() : " + e);
+		}
+
+		return entreprises;
 	}
 
 }

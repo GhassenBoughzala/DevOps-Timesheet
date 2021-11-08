@@ -31,13 +31,15 @@ public class EntrepriseServiceImplTest {
 		 idE=ientrepriseservice.ajouterEntreprise(new Entreprise("test_nom_entreprise","test_raison_sociale "));
 		assertNotNull(idE);
 	}
-	/*
+	
 	@Test
-	public void testGetEntrpriseById() {
-		Entreprise e =ientrepriseservice.getEntrepriseById(1); 
-		assertEquals(1, e.getId());
+	public void testRetrieveAlllistEntreprises() {
+		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
+		// if there are 7 users in DB : 
+		assertEquals(15, listEntreprises.size());
 	}
-	*/
+	
+	
 	@Test
 	public void testGetAllDepartementsNamesByEntreprise() {
 		
@@ -45,7 +47,12 @@ public class EntrepriseServiceImplTest {
 		assertNotNull(depNames);
 	}
 
-	
+	@Test
+	public void testModifyUser()   {
+		Entreprise e = new Entreprise( "esprit2", "université2"); 
+		Entreprise entrepriseUpdated  = ientrepriseservice.updateEntreprise(e); 
+		assertEquals(e.getName(), entrepriseUpdated.getName());
+	}
 	
 	
 	@Test
