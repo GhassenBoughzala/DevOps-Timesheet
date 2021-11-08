@@ -32,28 +32,13 @@ public class EntrepriseServiceImplTest {
 		assertNotNull(idE);
 	}
 	
-	@Test
-	public void testRetrieveAlllistEntreprises() {
-		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
-		// if there are 7 users in DB : 
-		assertEquals(15, listEntreprises.size());
-	}
-	
-	
+
 	@Test
 	public void testGetAllDepartementsNamesByEntreprise() {
 		
 		List<String> depNames = ientrepriseservice.getAllDepartementsNamesByEntreprise(1);
 		assertNotNull(depNames);
-	}
-
-	@Test
-	public void testModifyUser()   {
-		Entreprise e = new Entreprise( "esprit2", "université2"); 
-		Entreprise entrepriseUpdated  = ientrepriseservice.updateEntreprise(e); 
-		assertEquals(e.getName(), entrepriseUpdated.getName());
-	}
-	
+	}	
 	
 	@Test
 	public void testDeleteEntrepriseById()
@@ -63,7 +48,7 @@ public class EntrepriseServiceImplTest {
 		
 		assertEquals(0, i);}
 		else {
-			int i = ientrepriseservice.deleteEntrepriseById(6);
+			int i = ientrepriseservice.deleteEntrepriseById(7);
 			
 			assertEquals(0, i);}
 	}
