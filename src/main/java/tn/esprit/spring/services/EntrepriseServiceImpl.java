@@ -2,6 +2,7 @@ package tn.esprit.spring.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,18 +39,40 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	}
 
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
-		
-				Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).orElse(null);
-				Departement depManagedEntity = deptRepoistory.findById(depId).orElse(null);
-				
+
+		l.info(" methode affectation departement a entreprise");
+		l.debug("chercher de l'entreprise par id ");
+		Optional<Entreprise> value = entrepriseRepoistory.findById(entrepriseId);
+		if (value.isPresent()) {
+			Entreprise entrepriseManagedEntity = value.get();
+
+			l.debug(" trouver l'entreprise" + entrepriseManagedEntity);
+			l.debug("j recherche du departement par id ");
+			Optional<Departement> value1 = deptRepoistory.findById(depId);
+			if (value1.isPresent()) {
+				Departement depManagedEntity = value1.get();
+
+				l.debug(" trouver le departement" + depManagedEntity);
+				l.debug("update de l'ntreprise et l'enregistré");
+
 				depManagedEntity.setEntreprise(entrepriseManagedEntity);
 				deptRepoistory.save(depManagedEntity);
+
+				l.debug("'update de l'entreprise ");
+				l.info("fin de   la methode ");
+
+			}
+		}
+		else {
+			l.debug("l'entreprise ou departement n'exite pas");
+			l.info("fin de   la methode affectation departement a entreprise");
+
+		}
 	}
-	
 	
 	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
 		l.debug("methode getAllDepartementsNamesByEntreprise ");
-		List<String> depNames = new ArrayList<String>();
+		List<String> depNames = new ArrayList<>();
 		try {
 			Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).orElse(null);
 			
