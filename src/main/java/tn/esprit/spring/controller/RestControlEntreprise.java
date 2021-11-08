@@ -61,14 +61,8 @@ public class RestControlEntreprise {
 		return ientrepriseservice.getEntrepriseById(entrepriseId);
 	}
     
-    // http://localhost:8081/SpringMVC/servlet/ajouterDepartement
+ 
 
- 	@PostMapping("/ajouterDepartement")
- 	@ResponseBody
-	public int ajouterDepartement(@RequestBody Departement dep) {
-		return ientrepriseservice.ajouterDepartement(dep);
-	}
-	
  	 // http://localhost:8081/SpringMVC/servlet/getAllDepartementsNamesByEntreprise/1
     @GetMapping(value = "getAllDepartementsNamesByEntreprise/{identreprise}")
     @ResponseBody
@@ -76,11 +70,5 @@ public class RestControlEntreprise {
 		return ientrepriseservice.getAllDepartementsNamesByEntreprise(entrepriseId);
 	}
 
-    // URL : http://localhost:8081/SpringMVC/servlet/deleteDepartementById/3
-    @DeleteMapping("/deleteDepartementById/{iddept}") 
-	@ResponseBody 
-	public void deleteDepartementById(@PathVariable("iddept") int depId) {
-		ientrepriseservice.deleteDepartementById(depId);
 
-	}
 }

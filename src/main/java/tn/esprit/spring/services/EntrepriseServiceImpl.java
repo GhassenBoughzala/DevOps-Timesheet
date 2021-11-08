@@ -37,11 +37,6 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 				}	
 	}
 
-	public int ajouterDepartement(Departement dep) {
-		deptRepoistory.save(dep);
-		return dep.getId();
-	}
-	
 	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
 		
 				Entreprise entrepriseManagedEntity = entrepriseRepoistory.findById(entrepriseId).orElse(null);
@@ -91,12 +86,6 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 			l.error("erreur methode deleteEntrepriseById : " +e);
 			return -1;
 		}		
-	}
-
-	@Transactional
-	public int deleteDepartementById(int depId) {
-		deptRepoistory.delete(deptRepoistory.findById(depId).orElse(null));
-		return depId;	
 	}
 
 	public Entreprise getEntrepriseById(int entrepriseId) {
