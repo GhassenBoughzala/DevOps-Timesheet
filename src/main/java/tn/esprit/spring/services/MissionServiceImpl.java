@@ -1,6 +1,5 @@
 package tn.esprit.spring.services;
 
-import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.LogManager;
@@ -19,9 +18,9 @@ import tn.esprit.spring.repository.TimesheetRepository;
 public class MissionServiceImpl implements IMissionService {
 
 	@Autowired
-	MissionRepository MissionRepository;
+	MissionRepository miRepo;
 	@Autowired
-	DepartementRepository DepRepository;
+	DepartementRepository depRepo;
 	@Autowired
 	TimesheetRepository timesheetRepository;
 	
@@ -35,7 +34,7 @@ public class MissionServiceImpl implements IMissionService {
 			try {
 		
 				l.info("In retrieveAllMissions() : ");
-				ms = (List<Mission>) MissionRepository.findAll();  
+				ms = (List<Mission>) miRepo.findAll();  
 				for (Mission Mission : ms) {
 					l.debug("Mission +++ : " + Mission);
 				} 
@@ -50,28 +49,21 @@ public class MissionServiceImpl implements IMissionService {
 		@Override
 		public Mission addMission(Mission m) {
 			l.info("**ADDING MISSION**");
-			return MissionRepository.save(m); 
+			return miRepo.save(m); 
 			
 		}
 	
 		@Override
 		public void deleteMission(String id) {
-			MissionRepository.deleteById(Long.parseLong(id));
+			miRepo.deleteById(Long.parseLong(id));
 			
 		}
 	
 		@Override
 		public Mission updateMission(Mission m) {
-			return MissionRepository.save(m); 
+			return miRepo.save(m); 
 		}
-	
-		@Override
-		public Mission retrieveMission(String id) {
-			l.info("in  retrieveMission id = " + id);
-			Mission d =  MissionRepository.findById(Long.parseLong(id)).get(); 
-			l.info("Mission returned : " + d);
-			return d; 
-		}
+
 
 		@Override
 		public List<Mission> findAllMissionByEmployeJPQL(int employeId) {
@@ -88,13 +80,13 @@ public class MissionServiceImpl implements IMissionService {
 		@Override
 		public void affecterMissionADepartement(int missionId, int depId) {
 			l.info("**MISSION & DEP**");
-			Mission mission = MissionRepository.findById((long) missionId).orElse(null);
+			Mission mission = miRepo.findById((long) missionId).orElse(null);
 			l.info("MissionID = " + mission);
-			Departement dep = DepRepository.findById(depId).orElse(null);
+			Departement dep = depRepo.findById(depId).orElse(null);
 			l.info("DepartementID = " + dep);
 			if(mission!=null && dep !=null){
 			mission.setDepartement(dep);
-			MissionRepository.save(mission);
+			miRepo.save(mission);
 			}
   }
 }

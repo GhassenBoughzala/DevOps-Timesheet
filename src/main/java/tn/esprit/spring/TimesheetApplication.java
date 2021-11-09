@@ -19,7 +19,11 @@ import tn.esprit.spring.config.LoginFilter;
 @EnableAutoConfiguration
 public class TimesheetApplication {
 
-	public static void main(String[] args) {SpringApplication.run(TimesheetApplication.class, args);}
+	public static void main(String[] args) {
+
+		SpringApplication.run(TimesheetApplication.class, args);
+
+	}
 
 	@Bean
 	public ServletRegistrationBean<FacesServlet> servletRegistrationBean() {
@@ -41,6 +45,11 @@ public class TimesheetApplication {
 		registration.addUrlPatterns("/pages/*");
 		registration.setFilter(new LoginFilter());
 		return registration;
+
+
 	}
  
+
 }
+ 
+

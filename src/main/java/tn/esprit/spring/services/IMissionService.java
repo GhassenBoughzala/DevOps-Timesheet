@@ -12,7 +12,6 @@ public interface IMissionService {
 	Mission addMission(Mission m);
 	void deleteMission(String id);
 	Mission updateMission(Mission m);
-	Mission retrieveMission(String id);
 	public List<Mission> findAllMissionByEmployeJPQL(int employeId);
 	public List<Employe> getAllEmployeByMission(int missionId);
 	public void affecterMissionADepartement(int missionId, int depId);
