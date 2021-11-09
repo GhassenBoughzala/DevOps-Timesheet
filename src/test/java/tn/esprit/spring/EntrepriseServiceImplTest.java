@@ -39,7 +39,7 @@ public class EntrepriseServiceImplTest {
 		List<String> depNames = ientrepriseservice.getAllDepartementsNamesByEntreprise(1);
 		assertNotNull(depNames);
 	}	
-	
+/*	
 	@Test
 	public void testDeleteEntrepriseById()
 	{
@@ -52,6 +52,6 @@ public class EntrepriseServiceImplTest {
 			
 			assertEquals(0, i);}
 	}
-	
+*/	
 	
 }
