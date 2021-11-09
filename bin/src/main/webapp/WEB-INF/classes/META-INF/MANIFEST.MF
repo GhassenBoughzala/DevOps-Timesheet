@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: ASUS
+Build-Jdk: 16.0.2
+Implementation-Title: timesheet
+Implementation-Version: 1.0
+Implementation-Vendor-Id: tn.esprit.spring
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/timesheet
+Created-By: Maven Integration for Eclipse
+

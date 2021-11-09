@@ -33,7 +33,7 @@ public class Entreprise implements Serializable{
 	@OneToMany(mappedBy="entreprise", 
 			cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, 
 			fetch=FetchType.EAGER)
-	private List<Departement> departements = new ArrayList<>();
+	private List<Departement> departements = new ArrayList();
 
 	public Entreprise() {
 		super();

@@ -31,12 +31,10 @@ public class EmployeServiceImpl implements IEmployeService {
 	@Autowired
 	TimesheetRepository timesheetRepository;
 
-	@Override
 	public Employe authenticate(String login, String password) {
 		return employeRepository.getEmployeByEmailAndPassword(login, password);
 	}
 
-	@Override
 	public int addOrUpdateEmploye(Employe employe) {
 		employeRepository.save(employe);
 		return employe.getId();
@@ -57,7 +55,7 @@ public class EmployeServiceImpl implements IEmployeService {
 
 		if(depManagedEntity.getEmployes() == null){
 
-			List<Employe> employes = new ArrayList<>();
+			List<Employe> employes = new ArrayList<Employe>();
 			employes.add(employeManagedEntity);
 			depManagedEntity.setEmployes(employes);
 		}else{

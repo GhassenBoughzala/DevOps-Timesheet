@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Entreprise;
 import tn.esprit.spring.services.IEmployeService;
 import tn.esprit.spring.services.IEntrepriseService;
@@ -28,8 +27,7 @@ public class RestControlEntreprise {
 	IEntrepriseService ientrepriseservice;
 	@Autowired
 	ITimesheetService itimesheetservice;
-	
-	// Ajouter Entreprise : http://localhost:8081/SpringMVC/servlet/ajouterEntreprise
+		
 
 	@PostMapping("/ajouterEntreprise")
 	@ResponseBody
@@ -60,13 +58,8 @@ public class RestControlEntreprise {
 		return ientrepriseservice.getEntrepriseById(entrepriseId);
 	}
     
+ 
 
- 	@PostMapping("/ajouterDepartement")
- 	@ResponseBody
-	public int ajouterDepartement(@RequestBody Departement dep) {
-		return ientrepriseservice.ajouterDepartement(dep);
-	}
-	
  	 // http://localhost:8081/SpringMVC/servlet/getAllDepartementsNamesByEntreprise/1
     @GetMapping(value = "getAllDepartementsNamesByEntreprise/{identreprise}")
     @ResponseBody
@@ -74,11 +67,5 @@ public class RestControlEntreprise {
 		return ientrepriseservice.getAllDepartementsNamesByEntreprise(entrepriseId);
 	}
 
-    // URL : http://localhost:8081/SpringMVC/servlet/deleteDepartementById/3
-    @DeleteMapping("/deleteDepartementById/{iddept}") 
-	@ResponseBody 
-	public void deleteDepartementById(@PathVariable("iddept") int depId) {
-		ientrepriseservice.deleteDepartementById(depId);
 
-	}
 }
