@@ -48,7 +48,7 @@ public class EntrepriseServiceImplTest {
 		
 		assertEquals(0, i);}
 		else {
-			int i = ientrepriseservice.deleteEntrepriseById(27);
+			int i = ientrepriseservice.deleteEntrepriseById(28);
 			
 			assertEquals(0, i);}
 	}
