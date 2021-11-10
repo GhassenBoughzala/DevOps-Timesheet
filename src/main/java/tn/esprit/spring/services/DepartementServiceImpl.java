@@ -21,9 +21,8 @@ public class DepartementServiceImpl implements IDepartementService {
 	DepartementRepository deptRepoistory;
 	private static final Logger l = LogManager.getLogger(DepartementServiceImpl.class);
 	//Ajout d'une departement
-	public int ajouterDepartement(Departement dep) {
-		deptRepoistory.save(dep);
-		return dep.getId();
+	public Departement addDepartement(Departement d) {
+		return deptRepoistory.save(d); 
 	}
 	
 	//Affectation d'une departement à une entreprise
@@ -99,7 +98,7 @@ public class DepartementServiceImpl implements IDepartementService {
 			}		
 		}
 	@Transactional
-	public Integer deleteDepartementById(int depId) {
+	public void deleteDepartement(int depId) {
 		try {
 			l.info("In deleteDepartementById()");
 			Optional<Departement> departement=deptRepoistory.findById(depId);
@@ -109,22 +108,22 @@ public class DepartementServiceImpl implements IDepartementService {
 			l.debug("Département supprimé avec succés");
 			l.info("Out deleteDepartementById()");
 			}
-			return 1;
+			
 			
 		}
 		catch (Exception e) {
 			l.error("erreur dans la methode deleteDepartementById() :"+e);
-			return 0;
+	
 		}
 
 		 
 	}
-
-	@Override
-	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Departement updateDepartement(Departement dep) {
+		return deptRepoistory.save(dep); 
 	}
+
+	
+
 
 	
 
