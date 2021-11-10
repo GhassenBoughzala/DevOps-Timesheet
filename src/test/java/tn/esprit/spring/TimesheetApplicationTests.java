@@ -36,21 +36,21 @@ class TimesheetApplicationTests {
 		  int ssiiConsultingId =entrepriseControl.ajouterEntreprise(ssiiConsulting);
 		  ssiiConsulting.setId(ssiiConsultingId);
 		  depTelecom.setEntreprise(ssiiConsulting); 
-		  int depTelecomId = entrepriseControl.ajouterDepartement(depTelecom);
+		 // int depTelecomId = entrepriseControl.ajouterDepartement(depTelecom);
 		  depRH.setEntreprise(ssiiConsulting);
-		  int depRhId =entrepriseControl.ajouterDepartement(depRH);
+		 // int depRhId =entrepriseControl.ajouterDepartement(depRH);
 		  
-		  entrepriseControl.affecterDepartementAEntreprise(depTelecomId,ssiiConsultingId); 
-		  entrepriseControl.affecterDepartementAEntreprise(depRhId, ssiiConsultingId);
-		  List<String> departements = entrepriseControl.getAllDepartementsNamesByEntreprise(ssiiConsultingId); 
-		  for(String departementName : departements) { l.info(departementName); }
+		//  entrepriseControl.affecterDepartementAEntreprise(depTelecomId,ssiiConsultingId); 
+		//  entrepriseControl.affecterDepartementAEntreprise(depRhId, ssiiConsultingId);
+		//  List<String> departements = entrepriseControl.getAllDepartementsNamesByEntreprise(ssiiConsultingId); 
+		 // for(String departementName : departements) { l.info(departementName); }
 		
 		 
 	/* ************************************************************* */
 	
 	  
-  /*f4*/    List<Departement> listAlldepartements= entrepriseControl.getAllDepartements();
-	    for(Departement departement : listAlldepartements) { l.info(departement.getId() +" " + departement.getName());}
+  /*f4*/  //  List<Departement> listAlldepartements= entrepriseControl.getAllDepartements();
+	  //  for(Departement departement : listAlldepartements) { l.info(departement.getId() +" " + departement.getName());}
  
 	}
 }
