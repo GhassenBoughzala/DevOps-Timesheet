@@ -82,7 +82,7 @@ public class EmployeServiceImplTest {
 			l.error(String.format("Erreur dans Mettre A jour Email By Employe Id : %s ", e));
 		}
 	}
-
+/*
 	@Test
 	public void affecterEmployeADepartement() {
 		try {
@@ -101,7 +101,7 @@ public class EmployeServiceImplTest {
 		}
 
 	}
-
+*/
 	@Test
 	public void testDeleteEmployeById() {
 
