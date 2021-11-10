@@ -128,4 +128,30 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 		
 	}
 
+	@Override
+	public Entreprise retrieveEntreprise(String id) {
+		l.info("in  retrieveEntreprise id = " + id);
+		Entreprise e =  entrepriseRepoistory.findById((int) Long.parseLong(id)).get(); 
+		l.info("entreprise returned : " + e);
+		return e;
+	}
+
+	@Override
+	public List<Entreprise> retrieveAllEntreprises() {
+		List<Entreprise> entreprises = null; 
+		try {
+	
+			l.info("In retrieveAllEntreprises() : ");
+			entreprises = (List<Entreprise>) entrepriseRepoistory.findAll();  
+			for (Entreprise entreprise : entreprises) {
+				l.debug("entreprise +++ : " + entreprise);
+			} 
+			l.info("Out of retrieveAllEntreprises() : ");
+		}catch (Exception e) {
+			l.error("Error in retrieveAllEntreprises() : " + e);
+		}
+
+		return entreprises;
+	}
+
 }

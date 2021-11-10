@@ -1,36 +1,18 @@
-2021-11-08 12:45:55.203  INFO 1676 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 1676 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
-2021-11-08 12:45:55.218  INFO 1676 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
-2021-11-08 12:45:57.806  INFO 1676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-08 12:45:57.941  INFO 1676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-11-08 12:45:58.159  INFO 1676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-11-08 12:45:58.919  INFO 1676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2021-11-08 12:46:00.429  INFO 1676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-08 12:46:02.146  WARN 1676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-08 12:46:03.103  INFO 1676 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 8.719 seconds (JVM running for 10.139)
-2021-11-08 12:51:26.756  INFO 12768 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 12768 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
-2021-11-08 12:51:26.761  INFO 12768 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
-2021-11-08 12:51:32.200  INFO 12768 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-08 12:51:32.541  INFO 12768 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-11-08 12:51:33.097  INFO 12768 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-11-08 12:51:34.378  INFO 12768 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2021-11-08 12:51:38.612  INFO 12768 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-08 12:51:47.450  WARN 12768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-08 12:51:53.236  INFO 12768 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 27.528 seconds (JVM running for 29.408)
-2021-11-08 12:56:27.654  INFO 9604 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 9604 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
-2021-11-08 12:56:27.654  INFO 9604 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
-2021-11-08 12:56:30.171  INFO 9604 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-08 12:56:30.362  INFO 9604 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-11-08 12:56:30.699  INFO 9604 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-11-08 12:56:31.479  INFO 9604 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2021-11-08 12:56:32.619  INFO 9604 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-08 12:56:34.201  WARN 9604 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-08 12:56:36.213  INFO 9604 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 9.125 seconds (JVM running for 10.509)
-2021-11-08 12:58:23.176  INFO 5892 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 5892 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
-2021-11-08 12:58:23.176  INFO 5892 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
-2021-11-08 12:58:26.034  INFO 5892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-08 12:58:26.231  INFO 5892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
-2021-11-08 12:58:26.468  INFO 5892 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-11-08 12:58:27.184  INFO 5892 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2021-11-08 12:58:28.291  INFO 5892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-08 12:58:30.707  WARN 5892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-08 12:58:32.817  INFO 5892 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 10.143 seconds (JVM running for 11.604)
+2021-11-10 13:41:32.173  INFO 8196 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 8196 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-10 13:41:32.205  INFO 8196 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
+2021-11-10 13:41:38.664  INFO 8196 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-10 13:41:38.936  INFO 8196 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-10 13:41:39.354  INFO 8196 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-10 13:41:40.664  INFO 8196 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-10 13:41:42.482  INFO 8196 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-10 13:41:46.849  WARN 8196 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-10 13:41:48.326  INFO 8196 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 19.764 seconds (JVM running for 21.961)
+2021-11-10 13:43:36.075  INFO 2572 --- [main] t.e.spring.EntrepriseServiceImplTest     : Starting EntrepriseServiceImplTest on DESKTOP-1R9K27T with PID 2572 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-10 13:43:36.077  INFO 2572 --- [main] t.e.spring.EntrepriseServiceImplTest     : No active profile set, falling back to default profiles: default
+2021-11-10 13:43:38.783  INFO 2572 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-10 13:43:38.967  INFO 2572 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-10 13:43:39.254  INFO 2572 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-10 13:43:40.541  INFO 2572 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-10 13:43:42.400  INFO 2572 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-10 13:43:44.082  WARN 2572 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-10 13:43:45.899  INFO 2572 --- [main] t.e.spring.EntrepriseServiceImplTest     : Started EntrepriseServiceImplTest in 10.679 seconds (JVM running for 13.143)

@@ -48,9 +48,15 @@ public class EntrepriseServiceImplTest {
 		
 		assertEquals(0, i);}
 		else {
-			int i = ientrepriseservice.deleteEntrepriseById(7);
+			int i = ientrepriseservice.deleteEntrepriseById(27);
 			
 			assertEquals(0, i);}
+	}
+	@Test
+	public void testRetrieveAlllistEntreprises() {
+		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
+		// if there are 7 users in DB : 
+		assertEquals(25, listEntreprises.size());
 	}
 	
 	
