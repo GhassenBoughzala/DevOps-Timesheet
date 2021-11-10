@@ -27,7 +27,9 @@ public class RestControlEntreprise {
 	IEntrepriseService ientrepriseservice;
 	@Autowired
 	ITimesheetService itimesheetservice;
-		
+	
+	// Ajouter Entreprise : http://localhost:8081/SpringMVC/servlet/ajouterEntreprise
+	
 
 	@PostMapping("/ajouterEntreprise")
 	@ResponseBody
@@ -58,7 +60,7 @@ public class RestControlEntreprise {
 		return ientrepriseservice.getEntrepriseById(entrepriseId);
 	}
     
- 
+    // http://localhost:8081/SpringMVC/servlet/ajouterDepartement
 
  	 // http://localhost:8081/SpringMVC/servlet/getAllDepartementsNamesByEntreprise/1
     @GetMapping(value = "getAllDepartementsNamesByEntreprise/{identreprise}")

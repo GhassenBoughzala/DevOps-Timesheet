@@ -3,6 +3,7 @@ package tn.esprit.spring.services;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import tn.esprit.spring.repository.ContratRepository;
 import tn.esprit.spring.repository.DepartementRepository;
 import tn.esprit.spring.repository.EmployeRepository;
 import tn.esprit.spring.repository.TimesheetRepository;
+import org.apache.log4j.Logger;
 
 @Service
 public class EmployeServiceImpl implements IEmployeService {
@@ -30,6 +32,8 @@ public class EmployeServiceImpl implements IEmployeService {
 	ContratRepository contratRepoistory;
 	@Autowired
 	TimesheetRepository timesheetRepository;
+	
+	private static final Logger l = Logger.getLogger(EmployeServiceImpl.class);
 
 	public Employe authenticate(String login, String password) {
 		return employeRepository.getEmployeByEmailAndPassword(login, password);
@@ -42,11 +46,16 @@ public class EmployeServiceImpl implements IEmployeService {
 
 
 	public void mettreAjourEmailByEmployeId(String email, int employeId) {
-		Employe employe = employeRepository.findById(employeId).get();
+		Employe employe = employeRepository.findById(employeId).orElse(null);
+		if(employe!=null){
 		employe.setEmail(email);
 		employeRepository.save(employe);
-
+		
+		}
+		
+		
 	}
+
 
 	@Transactional	
 	public void affecterEmployeADepartement(int employeId, int depId) {
@@ -158,6 +167,26 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	public List<Employe> getAllEmployes() {
 		return (List<Employe>) employeRepository.findAll();
+	}
+	
+	public int ajouterEmploye(Employe employe) {
+		employeRepository.save(employe);
+		return employe.getId();
+	}
+
+	@Override
+	public Employe getEmployerById(int id) {
+           l.debug("methode getEmployeById ");
+		
+		
+		try {
+			Employe et= employeRepository.findById(id).orElse(null);
+			l.debug("getEmployeById fini avec succes ");
+			return et;
+		} catch (Exception e) {
+			l.error("erreur methode getEmployeById : " +e);
+			return null;
+		}	
 	}
 
 }
