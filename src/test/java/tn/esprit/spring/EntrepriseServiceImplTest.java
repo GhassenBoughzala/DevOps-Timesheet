@@ -56,8 +56,7 @@ public class EntrepriseServiceImplTest {
 		l.debug("methode testRetrieveAlllistEntreprises");
 		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
 		assertNotNull(listEntreprises);
-	}
-*/	
+	}	
 	
 	@Test
 	public void testRetrieveEntreprise() {
