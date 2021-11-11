@@ -125,7 +125,7 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 			return null;
 		}	
 		
-		
+		  
 	}
 
 	@Override
