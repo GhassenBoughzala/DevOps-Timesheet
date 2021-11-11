@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-
 import org.ocpsoft.rewrite.annotation.Join;
 import org.ocpsoft.rewrite.el.ELBeanName;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,9 +42,9 @@ public class ControllerEmployeImpl  {
 	public Role[] getRoles() { return Role.values(); }
 
 	private List<Employe> employes; 
+	private String url="/login.xhtml?faces-redirect=true";
 
 	private Integer employeIdToBeUpdated;
-	private String Login = "/login.xhtml?faces-redirect=true";
 
 
 	public String doLogin() {
@@ -71,14 +70,13 @@ public class ControllerEmployeImpl  {
 	{
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 	
-	return Login;
-	
+	return url;
 	}
 
 
 	public String addEmploye() {
 
-		if (authenticatedUser==null || !loggedIn) return Login;
+		if (authenticatedUser==null || !loggedIn) return url;
 
 		employeService.addOrUpdateEmploye(new Employe(nom, prenom, email, password, actif, role)); 
 		return "null"; 
@@ -86,7 +84,7 @@ public class ControllerEmployeImpl  {
 
 	public String removeEmploye(int employeId) {
 		String navigateTo = "null";
-		if (authenticatedUser==null || !loggedIn) return Login;
+		if (authenticatedUser==null || !loggedIn) return url;
 
 		employeService.deleteEmployeById(employeId);
 		return navigateTo; 
@@ -95,7 +93,7 @@ public class ControllerEmployeImpl  {
 	public String displayEmploye(Employe empl) 
 	{
 		String navigateTo = "null";
-		if (authenticatedUser==null || !loggedIn) return Login;
+		if (authenticatedUser==null || !loggedIn) return url;
 
 
 		this.setPrenom(empl.getPrenom());
@@ -114,7 +112,7 @@ public class ControllerEmployeImpl  {
 	{ 
 		String navigateTo = "null";
 		
-		if (authenticatedUser==null || !loggedIn) return Login;
+		if (authenticatedUser==null || !loggedIn) return url;
 
 		employeService.addOrUpdateEmploye(new Employe(employeIdToBeUpdated, nom, prenom, email, password, actif, role)); 
 

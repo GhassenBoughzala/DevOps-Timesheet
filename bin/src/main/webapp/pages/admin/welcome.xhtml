@@ -1,0 +1,136 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+	<ui:param name="page_name" value="Accueil" />
+
+	<ui:define name="content">
+
+		<h:panelGroup>
+			<h:form>
+				<h:outputText
+					value="Bonjour #{employeController.authenticatedUser.prenom} #{employeController.authenticatedUser.nom}" /> 
+				| 
+				<h:commandLink value="Déconnexion"
+					action="#{employeController.doLogout()}" />
+			</h:form>
+		</h:panelGroup>
+
+
+		<br />
+
+		<h:panelGroup columns="2">
+			<h:form>
+				<table>
+					<tr>
+						<td><h:outputText value="Login (Email)"></h:outputText></td>
+						<td>
+<h:inputText id="validateMail" required="true" validatorMessage="Le format du mail est invalide!" requiredMessage="Mail obligatoire!" value="#{employeController.email}">
+<f:validateRegex pattern=".+\@.+\..+" /> 
+</h:inputText> 
+<h:message for="validateMail" />
+								
+								</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Mot de Passe"></h:outputText></td>
+						<td><h:inputSecret value="#{employeController.password}"></h:inputSecret></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Nom"></h:outputText></td>
+						<td><h:inputText value="#{employeController.nom}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Prenom"></h:outputText></td>
+						<td><h:inputText value="#{employeController.prenom}"></h:inputText></td>
+					</tr>
+					<tr>
+						<td><h:outputText value="Actif / Inactif"></h:outputText></td>
+						<td><h:selectBooleanCheckbox
+								value="#{employeController.actif}"></h:selectBooleanCheckbox></td>
+					</tr>
+
+					<tr>
+						<td><h:outputText value="Role"></h:outputText></td>
+						<td><h:selectOneMenu value="#{employeController.role}">
+								<f:selectItem itemLabel="Choisir le Role" itemValue="#{null}" />
+								<f:selectItems value="#{employeController.roles}" />
+							</h:selectOneMenu></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"><h:commandButton value="Ajouter Employé"
+								action="#{employeController.addEmploye()}" /> <h:commandButton
+								value="Mettre A jour Employé"
+								action="#{employeController.updateEmploye()}" /></td>
+					</tr>
+
+				</table>
+			</h:form>
+		</h:panelGroup>
+		<!-- BEGIN : TP2 JSF CRUD Ajout Employé -->
+
+
+		<!-- BEGIN : TP3 JSF List Employes -->
+		<br />
+		<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{employeController.employes}" var="employe"
+					border="1">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Login" />
+						</f:facet>
+						<h:outputText value="#{employe.email}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Prenom" />
+						</f:facet>
+						<h:outputText value="#{employe.prenom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Nom" />
+						</f:facet>
+						<h:outputText value="#{employe.nom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Role" />
+						</f:facet>
+						<h:outputText value="#{employe.role}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Actif" />
+						</f:facet>
+						<h:outputText value="#{employe.actif == true ? 'Oui' : 'Non'}" />
+					</h:column>
+
+					<!-- BEGIN :  TP4 JSF Supprimer Employé -->
+					<!-- BEGIN :  TP4 JSF Modifier Employé -->
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Action" />
+						</f:facet>
+						<h:commandButton
+							action="#{employeController.removeEmploye(employe.id)}"
+							value="Supprimer" />
+						<h:commandButton
+							action="#{employeController.displayEmploye(employe)}"
+							value="Afficher" />
+					</h:column>
+					<!-- END :  TP4 JSF Supprimer Employé -->
+					<!-- END :  TP4 JSF Modifer Employé -->
+
+				</h:dataTable>
+			</h:form>
+		</h:panelGroup>
+		<!-- END :  TP3 JSF List Employes -->
+
+	</ui:define>
+
+</ui:composition>
