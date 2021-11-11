@@ -56,7 +56,7 @@ public class EmployeServiceImplTest {
 			int id = employeS
 					.ajouterEmploye(new Employe("Mehdy", "benromdhane", "mehdy.benromdhane@spring.tn", true, Role.INGENIEUR));
 
-			assertThat(id).isGreaterThan(0);
+			assertThat(id).isPositive();
 			l.info("Employe added successfully!");
 			employeS.deleteEmployeById(id);
 
@@ -95,7 +95,12 @@ public class EmployeServiceImplTest {
 			l.info("---->desaffectaion, de lemployer de departement");
 			employeS.desaffecterEmployeDuDepartement(idE, idD);
 			employeS.deleteEmployeById(idE);
+			assertThat(idE).isNull();
+
 			entrepriseS.deleteDepartementById(idD);
+			assertThat(idD).isNull();
+
+
 		} catch (Exception e) {
 			l.error(String.format("Erreur dans l'affectaion : %s ", e));
 		}
