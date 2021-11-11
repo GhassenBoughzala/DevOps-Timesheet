@@ -9,21 +9,21 @@ pipeline {
 
 
 	stages{
-
-			stage('Clean and package'){
+			
+			stage('Clean Package Test'){
+					steps{
+						bat "mvn clean package"
+						bat "mvn test"
+					}				
+				}
+				
+			stage('Sonar Analyse'){
 				steps{
-					bat "mvn clean package"
-					
-				}				
-			}
+                    bat "mvn sonar:sonar"
+                  }
+            }
 
-			stage('Sonar'){
-				steps{
-                   bat "mvn sonar:sonar"
-                }
-			} 
-
-			stage('Deploy'){
+            stage('Nexus Deploy'){
 				steps{
 					bat "mvn deploy"
 				}				
@@ -33,23 +33,20 @@ pipeline {
 				steps{
 					script{
 						dockerImage = docker.build registry + ":$BUILD_NUMBER"
-			 		}
-			 	}				
-			 }
+					}
+				}				
+			}
 
-			 stage('Deploy Image'){
-			 	steps{
-			 		script{
-			 			docker.withRegistry( '', registryCredential ) 
-                         {dockerImage.push()}
-			 		}
-			 	}
-			 }
-
-			
-
+			stage('Deploy Image'){
+				steps{
+					script{
+						docker.withRegistry( '', registryCredential ) 
+                        {dockerImage.push()}
+					}
+				}
+			}
+							
 		
-
 			
-	}
-}
+		}
+	} 
