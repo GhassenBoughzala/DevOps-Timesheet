@@ -1,17 +1,19 @@
-pipeline {
+pipeline {	
+
 	agent any 
 	
 	environment { 
-        registry = "amiryazidi/devopstimesheet" 
+        registry = "shadyettaieb/devopstimesheet" 
         registryCredential = 'dockerHub'
         dockerImage = '' 
     }
 
-		stages{
-
-			stage('Clean Package'){
+	stages{
+			
+			stage('Clean Package Test'){
 					steps{
 						bat "mvn clean package"
+						bat "mvn test"
 					}				
 				}
 				
@@ -26,7 +28,7 @@ pipeline {
 					bat "mvn deploy"
 				}				
 			}
-			
+
 			stage('Building Image'){
 				steps{
 					script{
@@ -42,6 +44,10 @@ pipeline {
                         {dockerImage.push()}
 					}
 				}
-			}	
-	}
-}
+			}
+							
+		
+			
+		}
+	} 
+

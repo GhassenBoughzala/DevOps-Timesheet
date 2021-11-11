@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "log4j.rootLogger",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.rootLogger'"
+  },
+  {
+    "name": "log4j.appender.A1",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.A1'"
+  },
+  {
+    "name": "log4j.rootLogger",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.rootLogger'"
+  },
+  {
+    "name": "log4j.rootLogger",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.rootLogger'"
+  },
+  {
+    "name": "log4j.appender.A1.layout",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.A1.layout'"
+  }
+]}

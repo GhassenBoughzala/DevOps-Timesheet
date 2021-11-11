@@ -11,6 +11,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
 @Entity
 public class Contrat implements Serializable {
 	
@@ -24,6 +25,7 @@ public class Contrat implements Serializable {
 	private Date dateDebut;
 	
 	private String typeContrat;
+	
 	
 	
 	
