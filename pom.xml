@@ -10,7 +10,11 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
+<<<<<<< HEAD
 	<version>2.2.3-SNAPSHOT</version>
+=======
+	<version>2.2.2-SNAPSHOT</version>
+>>>>>>> 165da31d78c8232ef9cd2f7d203d106f27f85b5a
 	<name>timesheet</name>
 	<description>timesheet</description>
 
