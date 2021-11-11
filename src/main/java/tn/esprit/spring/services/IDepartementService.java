@@ -12,5 +12,5 @@ public interface IDepartementService {
 	void affecterDepartementAEntreprise(int depId, int entrepriseId);
 	List<String> getAllDepartementsNamesByEntreprise(int entrepriseId);
 	public void deleteDepartementById(int depId);
-	
+	List<Departement> getAllDepartements();
 }
