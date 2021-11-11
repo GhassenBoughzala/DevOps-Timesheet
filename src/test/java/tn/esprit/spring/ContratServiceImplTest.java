@@ -45,7 +45,7 @@ public class ContratServiceImplTest {
 	
 	@Test
 	public void testDeleteContratById() {
-		int idC = 123;
+		int idC = 136;
 		int i=cs.deleteContratById(idC);
 		Assert.assertEquals(0,i);
 	}

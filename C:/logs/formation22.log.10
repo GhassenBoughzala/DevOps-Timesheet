@@ -1,0 +1,7 @@
+2021- 11-11 23:34:06 [DEBUG] tn.esprit.spring.services.EntrepriseServiceImpl.retrieveAllEntreprises(EntrepriseServiceImpl.java:152):152 - entreprise +++ : tn.esprit.spring.entities.Entreprise@7d0e43d6
+ 2021- 11-11 23:34:06 [DEBUG] tn.esprit.spring.services.EntrepriseServiceImpl.retrieveAllEntreprises(EntrepriseServiceImpl.java:152):152 - entreprise +++ : tn.esprit.spring.entities.Entreprise@df04d12
+ 2021- 11-11 23:34:06 [INFO ] tn.esprit.spring.services.EntrepriseServiceImpl.retrieveAllEntreprises(EntrepriseServiceImpl.java:154):154 - Out of retrieveAllEntreprises() : 
+ 2021- 11-11 23:34:06 [DEBUG] tn.esprit.spring.services.EntrepriseServiceImpl.getAllDepartementsNamesByEntreprise(EntrepriseServiceImpl.java:74):74 - methode getAllDepartementsNamesByEntreprise 
+ 2021- 11-11 23:34:07 [DEBUG] tn.esprit.spring.services.EntrepriseServiceImpl.getAllDepartementsNamesByEntreprise(EntrepriseServiceImpl.java:83):83 - getAllDepartementsNamesByEntreprise fini avec succes 
+ 2021- 11-11 23:34:07 [INFO ] tn.esprit.spring.services.MissionServiceImpl.getAllEmployeByMission(MissionServiceImpl.java:76):76 - ** EMP BY MISSION **
+ 
