@@ -1,11 +1,9 @@
 package tn.esprit.spring.services;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +30,19 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	TimesheetRepository timesheetRepository;
 	@Autowired
 	EmployeRepository employeRepository;
-	private static final Logger l = LogManager.getLogger(TimesheetServiceImpl.class);
+	
+	public int ajouterMission(Mission mission) {
+		missionRepository.save(mission);
+		return mission.getId();
+	}
+    
+	public void affecterMissionADepartement(int missionId, int depId) {
+		Mission mission = missionRepository.findById(missionId).get();
+		Departement dep = deptRepoistory.findById(depId).get();
+		mission.setDepartement(dep);
+		missionRepository.save(mission);
+		
+	}
 
 	public void ajouterTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin) {
 		TimesheetPK timesheetPK = new TimesheetPK();
@@ -50,46 +60,45 @@ public class TimesheetServiceImpl implements ITimesheetService {
 
 	
 	public void validerTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin, int validateurId) {
-		
-		l.info("In valider Timesheet");
-		Optional<Employe> validateurOp = employeRepository.findById(validateurId);
-		Optional<Mission> missionOp = missionRepository.findById((long) missionId);
-		Employe employeva = new Employe();
+		System.out.println("In valider Timesheet");
+		Employe validateur = employeRepository.findById(validateurId).get();
+		Mission mission = missionRepository.findById(missionId).get();
 		//verifier s'il est un chef de departement (interet des enum)
-		if(validateurOp.isPresent()){
-			employeva = validateurOp.get();
-			if(!employeva.getRole().equals(Role.CHEF_DEPARTEMENT)){
-				l.info("l'employe doit etre chef de departement pour valider une feuille de temps !");
+		if(!validateur.getRole().equals(Role.CHEF_DEPARTEMENT)){
+			System.out.println("l'employe doit etre chef de departement pour valider une feuille de temps !");
 			return;
-			}
 		}
-		
 		//verifier s'il est le chef de departement de la mission en question
 		boolean chefDeLaMission = false;
-		for(Departement dep : employeva.getDepartements()){
-			if(missionOp.isPresent()){
-				Mission mission = missionOp.get();
-				if(dep.getId() ==  mission.getDepartement().getId()){
-					chefDeLaMission = true;
-					break;
-				}
-			}			
+		for(Departement dep : validateur.getDepartements()){
+			if(dep.getId() == mission.getDepartement().getId()){
+				chefDeLaMission = true;
+				break;
+			}
 		}
-		
 		if(!chefDeLaMission){
-			l.info("l'employe doit etre chef de departement de la mission en question");
+			System.out.println("l'employe doit etre chef de departement de la mission en question");
 			return;
 		}
 //
 		TimesheetPK timesheetPK = new TimesheetPK(missionId, employeId, dateDebut, dateFin);
-		Timesheet timesheet =timesheetRepository.findByTimesheetPK(timesheetPK);
+		Timesheet timesheet =timesheetRepository.findBytimesheetPK(timesheetPK);
 		timesheet.setValide(true);
+		
+		//Comment Lire une date de la base de données
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println("dateDebut : " + dateFormat.format(timesheet.getTimesheetPK().getDateDebut()));
 		
 	}
 
-	public List<Timesheet> getTimesheetsByMissionAndDate
-	(Employe employe, Mission mission, Date dateDebut,Date dateFin) {
-
-		return (timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin));
+	
+	public List<Mission> findAllMissionByEmployeJPQL(int employeId) {
+		return timesheetRepository.findAllMissionByEmployeJPQL(employeId);
 	}
+
+	
+	public List<Employe> getAllEmployeByMission(int missionId) {
+		return timesheetRepository.getAllEmployeByMission(missionId);
+	}
+
 }

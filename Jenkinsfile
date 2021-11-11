@@ -1,34 +1,32 @@
-pipeline {	
-
-	agent any 
+pipeline {
+   agent any 
 	
 	environment { 
-        registry = "shadyettaieb/devopstimesheet" 
+        registry = "khaoulaarfaoui/devopstimesheet" 
         registryCredential = 'dockerHub'
         dockerImage = '' 
     }
 
-	stages{
-			
-			stage('Clean Package Test'){
+		stages{
+
+			stage('Clean Package'){
 					steps{
-						bat "mvn clean package"
-						bat "mvn test"
+						sh "mvn clean package"
 					}				
 				}
 				
 			stage('Sonar Analyse'){
 				steps{
-                    bat "mvn sonar:sonar"
+                    sh "mvn sonar:sonar"
                   }
             }
 
             stage('Nexus Deploy'){
 				steps{
-					bat "mvn deploy"
+					sh "mvn deploy"
 				}				
 			}
-
+			
 			stage('Building Image'){
 				steps{
 					script{
@@ -45,9 +43,6 @@ pipeline {
 					}
 				}
 			}
-							
-		
-			
-		}
-	} 
 
+
+} }
