@@ -13,4 +13,5 @@ public interface IDepartementService {
 	List<String> getAllDepartementsNamesByEntreprise(int entrepriseId);
 	public void deleteDepartementById(int depId);
 	List<Departement> getAllDepartements();
+	public Departement findById(int departementIdDTO);
 }
