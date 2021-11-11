@@ -131,9 +131,14 @@ public class EntrepriseServiceImpl implements IEntrepriseService {
 	@Override
 	public Entreprise retrieveEntreprise(String id) {
 		l.info("in  retrieveEntreprise id = " + id);
-		Entreprise e =  entrepriseRepoistory.findById((int) Long.parseLong(id)).get(); 
-		l.info("entreprise returned : " + e);
-		return e;
+		Optional <Entreprise> e =  entrepriseRepoistory.findById((int) Long.parseLong(id)); 
+		Entreprise enp = new Entreprise();
+		if (e.isPresent()) {
+			enp=e.get();
+			l.info("entreprise returned : " + enp);
+			
+		}
+		return enp;
 	}
 
 	@Override

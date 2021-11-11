@@ -3,7 +3,8 @@ package tn.esprit.spring;
 import static org.junit.Assert.*;
 
 import java.util.List;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ import tn.esprit.spring.services.IEntrepriseService;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class EntrepriseServiceImplTest {
+	
+	private static final Logger l = LogManager.getLogger(EntrepriseServiceImplTest.class);
+
 	@Autowired
 	IEntrepriseService ientrepriseservice;
 	
@@ -27,9 +31,15 @@ public class EntrepriseServiceImplTest {
 	
 	
 	@Test
-	public void testAjouterEntreprise()  {      
+	public void testAjouterEntreprise()  { 
+		 l.debug("methode ajouterEntreprise");
+		 try {
 		 idE=ientrepriseservice.ajouterEntreprise(new Entreprise("test_nom_entreprise","test_raison_sociale "));
 		assertNotNull(idE);
+		 } catch (Exception e) {
+		       l.error("erreur methode ajouterEntreprise :" +e);	
+
+			}
 	}
 	
 
@@ -48,15 +58,20 @@ public class EntrepriseServiceImplTest {
 		
 		assertEquals(0, i);}
 		else {
-			int i = ientrepriseservice.deleteEntrepriseById(28);
+			int i = ientrepriseservice.deleteEntrepriseById(22);
 			
 			assertEquals(0, i);}
 	}
 	@Test
 	public void testRetrieveAlllistEntreprises() {
 		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
-		// if there are 7 users in DB : 
-		assertEquals(25, listEntreprises.size());
+		assertNotNull(listEntreprises);
+	}
+	
+	@Test
+	public void testRetrieveEntreprise() {
+		Entreprise entrepriseRetrieved = ientrepriseservice.retrieveEntreprise("1"); 
+		assertEquals(1L, entrepriseRetrieved.getId());
 	}
 	
 	
