@@ -63,7 +63,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public void affecterEmployeADepartement(int employeId, int depId) {
 		Optional <Departement> depManagedEntity = deptRepoistory.findById(depId);
 		Optional<Employe> employeManagedEntity = employeRepository.findById(employeId);
-		Departement dep = new Departement();
+		Departement dep;
 		Employe emp = new Employe();
 
 		if (depManagedEntity.isPresent()) {
@@ -90,7 +90,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public void desaffecterEmployeDuDepartement(int employeId, int depId)
 	{
 		Optional <Departement> dep = deptRepoistory.findById(depId);
-		Departement dept = new Departement();
+		Departement dept;
 		
 		if (dep.isPresent()) {
 			dept = dep.get();
@@ -143,7 +143,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public void deleteEmployeById(int employeId)
 	{
 		Optional<Employe> employe = employeRepository.findById(employeId);
-		Employe emp = new Employe();
+		Employe emp;
 		
 		if (employe.isPresent()) {
 			emp = employe.get();
@@ -159,7 +159,7 @@ public class EmployeServiceImpl implements IEmployeService {
 
 	public void deleteContratById(int contratId) {
 		Optional<Contrat> contratManagedEntity = contratRepoistory.findById(contratId);
-		Contrat cont = new Contrat();
+		Contrat cont;
 		if (contratManagedEntity.isPresent()) {
 			cont = contratManagedEntity.get();
 			contratRepoistory.delete(cont);
@@ -202,7 +202,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		return timesheetRepository.getTimesheetsByMissionAndDate(employe, mission, dateDebut, dateFin);
 	}
 
-	public List<Employe> getAllEmployes() {
+	public List<Employe> getAllEmployes() { 
 		return (List<Employe>) employeRepository.findAll();
 	}
 	
