@@ -44,7 +44,9 @@ public class ControllerEmployeImpl  {
 	private List<Employe> employes; 
 	private String url="/login.xhtml?faces-redirect=true";
 
-	private Integer employeIdToBeUpdated; // getter et setter
+	private Integer employeIdToBeUpdated;
+	@SuppressWarnings("unused")
+	private String Login = "/login.xhtml?faces-redirect=true";
 
 
 	public String doLogin() {
@@ -65,7 +67,7 @@ public class ControllerEmployeImpl  {
 		}
 		return navigateTo;	
 	}
-
+	
 	public String doLogout()
 	{
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();

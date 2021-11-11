@@ -35,12 +35,10 @@ public class EmployeServiceImpl implements IEmployeService {
 	
 	private static final Logger l = Logger.getLogger(EmployeServiceImpl.class);
 
-	@Override
 	public Employe authenticate(String login, String password) {
 		return employeRepository.getEmployeByEmailAndPassword(login, password);
 	}
 
-	@Override
 	public int addOrUpdateEmploye(Employe employe) {
 		employeRepository.save(employe);
 		return employe.getId();
