@@ -15,9 +15,6 @@ import javax.persistence.OneToMany;
 @Entity
 public class Entreprise implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 3152690779535828408L;
 
 	
@@ -27,13 +24,12 @@ public class Entreprise implements Serializable{
 	
 	private String name;
 	
-	
 	private String raisonSocial;
 	
 	@OneToMany(mappedBy="entreprise", 
 			cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, 
 			fetch=FetchType.EAGER)
-	private List<Departement> departements = new ArrayList();
+	private List<Departement> departements = new ArrayList<>();
 
 	public Entreprise() {
 		super();
