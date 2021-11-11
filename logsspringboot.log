@@ -187,3 +187,363 @@
 2021-11-11 22:24:44.596  INFO 14004 --- [main] tn.esprit.spring.config.LoggingAspect    : In method findAllMissionByEmployeJPQL : 
 2021-11-11 22:24:44.600  INFO 14004 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
 2021-11-11 22:24:44.600  INFO 14004 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :findAllMissionByEmployeJPQL
+2021-11-12 00:21:36.473  INFO 4712 --- [main] tn.esprit.spring.ContratServiceImplTest  : Starting ContratServiceImplTest on DESKTOP-1R9K27T with PID 4712 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-12 00:21:36.481  INFO 4712 --- [main] tn.esprit.spring.ContratServiceImplTest  : No active profile set, falling back to default profiles: default
+2021-11-12 00:21:39.871  INFO 4712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-12 00:21:40.081  INFO 4712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-12 00:21:40.392  INFO 4712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-12 00:21:41.248  INFO 4712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-12 00:21:43.236  INFO 4712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-12 00:21:45.192  WARN 4712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-12 00:21:46.770  INFO 4712 --- [main] tn.esprit.spring.ContratServiceImplTest  : Started ContratServiceImplTest in 11.299 seconds (JVM running for 13.26)
+2021-11-12 00:21:46.957  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllContrats : 
+2021-11-12 00:21:46.965  INFO 4712 --- [main] t.e.spring.services.ContratServiceImpl   : In getAllContrats() : 
+2021-11-12 00:21:46.965  INFO 4712 --- [main] t.e.spring.services.ContratServiceImpl   : Out getAllContrats() 
+2021-11-12 00:21:47.044  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 87 milliseconds.
+2021-11-12 00:21:47.045  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllContrats
+2021-11-12 00:21:47.059  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterContrat : 
+2021-11-12 00:21:47.179  INFO 4712 --- [main] t.e.spring.services.ContratServiceImpl   : Contrat ajouter avec ref = 1
+2021-11-12 00:21:47.179  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 120 milliseconds.
+2021-11-12 00:21:47.179  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterContrat
+2021-11-12 00:21:47.194  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterDepartement : 
+2021-11-12 00:21:47.225  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 30 milliseconds.
+2021-11-12 00:21:47.225  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterDepartement
+2021-11-12 00:21:47.231  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartements : 
+2021-11-12 00:21:47.302  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 71 milliseconds.
+2021-11-12 00:21:47.303  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartements
+2021-11-12 00:21:47.309  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:21:47.318  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 9 milliseconds.
+2021-11-12 00:21:47.318  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:21:47.338  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:21:47.378  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 41 milliseconds.
+2021-11-12 00:21:47.378  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:21:47.378  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:21:47.436  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 58 milliseconds.
+2021-11-12 00:21:47.437  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:21:47.437  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:21:47.445  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:21:47.448  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:21:47.608  INFO 4712 --- [main] tn.esprit.spring.EmployeServiceImplTest  : --->Employe deleted successfully!
+2021-11-12 00:21:47.616  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:21:47.624  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:21:47.625  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:21:47.631  INFO 4712 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Employe added successfully!
+2021-11-12 00:21:47.631  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:21:47.647  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:21:47.647  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:21:47.652  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:21:47.660  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:21:47.660  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:21:47.661  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployePrenomById : 
+2021-11-12 00:21:47.667  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:21:47.667  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployePrenomById
+2021-11-12 00:21:47.667  INFO 4712 --- [main] tn.esprit.spring.EmployeServiceImplTest  : ------> Prenom de lemploye est : benromdhane
+2021-11-12 00:21:47.675  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:21:47.688  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 13 milliseconds.
+2021-11-12 00:21:47.689  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:21:47.695  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:21:47.700  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:21:47.700  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:21:47.700  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method mettreAjourEmailByEmployeId : 
+2021-11-12 00:21:47.724  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 24 milliseconds.
+2021-11-12 00:21:47.724  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :mettreAjourEmailByEmployeId
+2021-11-12 00:21:47.725  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:21:47.731  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 7 milliseconds.
+2021-11-12 00:21:47.732  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:21:47.732  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:21:47.745  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 13 milliseconds.
+2021-11-12 00:21:47.746  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:21:47.764  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEntreprise : 
+2021-11-12 00:21:47.783  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 19 milliseconds.
+2021-11-12 00:21:47.784  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEntreprise
+2021-11-12 00:21:47.789  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveEntreprise : 
+2021-11-12 00:21:47.795  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:21:47.795  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveEntreprise
+2021-11-12 00:21:47.800  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllEntreprises : 
+2021-11-12 00:21:47.835  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 35 milliseconds.
+2021-11-12 00:21:47.835  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllEntreprises
+2021-11-12 00:21:47.841  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:21:47.845  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:21:47.845  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:21:47.859  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllEmployeByMission : 
+2021-11-12 00:21:47.958  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 99 milliseconds.
+2021-11-12 00:21:47.958  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllEmployeByMission
+2021-11-12 00:21:47.965  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method addMission : 
+2021-11-12 00:21:47.977  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 12 milliseconds.
+2021-11-12 00:21:47.977  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :addMission
+2021-11-12 00:21:47.983  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllMission : 
+2021-11-12 00:21:47.994  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 11 milliseconds.
+2021-11-12 00:21:47.994  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllMission
+2021-11-12 00:21:47.998  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : In method findAllMissionByEmployeJPQL : 
+2021-11-12 00:21:48.002  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:21:48.002  INFO 4712 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :findAllMissionByEmployeJPQL
+2021-11-12 00:22:08.529  INFO 10636 --- [main] tn.esprit.spring.ContratServiceImplTest  : Starting ContratServiceImplTest on DESKTOP-1R9K27T with PID 10636 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-12 00:22:08.532  INFO 10636 --- [main] tn.esprit.spring.ContratServiceImplTest  : No active profile set, falling back to default profiles: default
+2021-11-12 00:22:12.493  INFO 10636 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-12 00:22:13.054  INFO 10636 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-12 00:22:13.353  INFO 10636 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-12 00:22:14.267  INFO 10636 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-12 00:22:16.464  INFO 10636 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-12 00:22:20.334  WARN 10636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-12 00:22:22.346  INFO 10636 --- [main] tn.esprit.spring.ContratServiceImplTest  : Started ContratServiceImplTest in 14.833 seconds (JVM running for 16.969)
+2021-11-12 00:22:22.694  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllContrats : 
+2021-11-12 00:22:22.710  INFO 10636 --- [main] t.e.spring.services.ContratServiceImpl   : In getAllContrats() : 
+2021-11-12 00:22:22.712  INFO 10636 --- [main] t.e.spring.services.ContratServiceImpl   : Out getAllContrats() 
+2021-11-12 00:22:22.897  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 201 milliseconds.
+2021-11-12 00:22:22.898  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllContrats
+2021-11-12 00:22:22.917  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterContrat : 
+2021-11-12 00:22:22.986  INFO 10636 --- [main] t.e.spring.services.ContratServiceImpl   : Contrat ajouter avec ref = 2
+2021-11-12 00:22:22.987  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 70 milliseconds.
+2021-11-12 00:22:22.987  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterContrat
+2021-11-12 00:22:23.010  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterDepartement : 
+2021-11-12 00:22:23.040  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 30 milliseconds.
+2021-11-12 00:22:23.040  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterDepartement
+2021-11-12 00:22:23.045  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartements : 
+2021-11-12 00:22:23.097  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 52 milliseconds.
+2021-11-12 00:22:23.098  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartements
+2021-11-12 00:22:23.110  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:22:23.125  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 15 milliseconds.
+2021-11-12 00:22:23.125  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:22:23.142  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:22:23.171  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 29 milliseconds.
+2021-11-12 00:22:23.172  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:22:23.172  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:22:23.232  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 60 milliseconds.
+2021-11-12 00:22:23.232  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:22:23.233  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:22:23.241  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:22:23.242  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:22:23.405  INFO 10636 --- [main] tn.esprit.spring.EmployeServiceImplTest  : --->Employe deleted successfully!
+2021-11-12 00:22:23.427  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:22:23.433  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:22:23.433  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:22:23.439  INFO 10636 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Employe added successfully!
+2021-11-12 00:22:23.441  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:22:23.456  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 15 milliseconds.
+2021-11-12 00:22:23.457  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:22:23.464  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:22:23.473  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 9 milliseconds.
+2021-11-12 00:22:23.473  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:22:23.474  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployePrenomById : 
+2021-11-12 00:22:23.479  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:22:23.479  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployePrenomById
+2021-11-12 00:22:23.481  INFO 10636 --- [main] tn.esprit.spring.EmployeServiceImplTest  : ------> Prenom de lemploye est : benromdhane
+2021-11-12 00:22:23.487  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:22:23.504  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 17 milliseconds.
+2021-11-12 00:22:23.504  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:22:23.509  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:22:23.514  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:22:23.514  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:22:23.514  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method mettreAjourEmailByEmployeId : 
+2021-11-12 00:22:23.543  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 29 milliseconds.
+2021-11-12 00:22:23.544  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :mettreAjourEmailByEmployeId
+2021-11-12 00:22:23.546  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:22:23.553  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:22:23.555  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:22:23.555  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:22:23.571  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:22:23.572  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:22:23.591  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEntreprise : 
+2021-11-12 00:22:23.613  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 22 milliseconds.
+2021-11-12 00:22:23.613  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEntreprise
+2021-11-12 00:22:23.620  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveEntreprise : 
+2021-11-12 00:22:23.626  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:22:23.626  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveEntreprise
+2021-11-12 00:22:23.633  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllEntreprises : 
+2021-11-12 00:22:23.667  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 34 milliseconds.
+2021-11-12 00:22:23.667  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllEntreprises
+2021-11-12 00:22:23.673  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:22:23.679  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:22:23.679  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:22:23.704  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllEmployeByMission : 
+2021-11-12 00:22:23.872  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 168 milliseconds.
+2021-11-12 00:22:23.872  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllEmployeByMission
+2021-11-12 00:22:23.879  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method addMission : 
+2021-11-12 00:22:23.893  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 14 milliseconds.
+2021-11-12 00:22:23.893  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :addMission
+2021-11-12 00:22:23.899  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllMission : 
+2021-11-12 00:22:23.911  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 13 milliseconds.
+2021-11-12 00:22:23.911  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllMission
+2021-11-12 00:22:23.917  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : In method findAllMissionByEmployeJPQL : 
+2021-11-12 00:22:23.922  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:22:23.923  INFO 10636 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :findAllMissionByEmployeJPQL
+2021-11-12 00:31:18.074  INFO 7068 --- [main] tn.esprit.spring.ContratServiceImplTest  : Starting ContratServiceImplTest on DESKTOP-1R9K27T with PID 7068 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-12 00:31:18.082  INFO 7068 --- [main] tn.esprit.spring.ContratServiceImplTest  : No active profile set, falling back to default profiles: default
+2021-11-12 00:31:21.038  INFO 7068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-12 00:31:21.284  INFO 7068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-12 00:31:21.631  INFO 7068 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-12 00:31:22.731  INFO 7068 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-12 00:31:24.724  INFO 7068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-12 00:31:27.311  WARN 7068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-12 00:31:28.462  INFO 7068 --- [main] tn.esprit.spring.ContratServiceImplTest  : Started ContratServiceImplTest in 11.458 seconds (JVM running for 13.002)
+2021-11-12 00:31:28.728  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllContrats : 
+2021-11-12 00:31:28.748  INFO 7068 --- [main] t.e.spring.services.ContratServiceImpl   : In getAllContrats() : 
+2021-11-12 00:31:28.749  INFO 7068 --- [main] t.e.spring.services.ContratServiceImpl   : Out getAllContrats() 
+2021-11-12 00:31:28.935  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 206 milliseconds.
+2021-11-12 00:31:28.935  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllContrats
+2021-11-12 00:31:28.949  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterContrat : 
+2021-11-12 00:31:29.017  INFO 7068 --- [main] t.e.spring.services.ContratServiceImpl   : Contrat ajouter avec ref = 3
+2021-11-12 00:31:29.017  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 68 milliseconds.
+2021-11-12 00:31:29.017  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterContrat
+2021-11-12 00:31:29.036  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterDepartement : 
+2021-11-12 00:31:29.067  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 32 milliseconds.
+2021-11-12 00:31:29.068  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterDepartement
+2021-11-12 00:31:29.073  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartements : 
+2021-11-12 00:31:29.123  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 50 milliseconds.
+2021-11-12 00:31:29.123  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartements
+2021-11-12 00:31:29.130  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:31:29.136  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:31:29.137  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:31:29.161  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:29.184  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 23 milliseconds.
+2021-11-12 00:31:29.184  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:29.184  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:29.232  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 48 milliseconds.
+2021-11-12 00:31:29.233  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:29.234  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:31:29.239  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:31:29.239  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:31:29.314  INFO 7068 --- [main] tn.esprit.spring.EmployeServiceImplTest  : --->Employe deleted successfully!
+2021-11-12 00:31:29.320  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:29.324  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:31:29.325  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:29.332  INFO 7068 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Employe added successfully!
+2021-11-12 00:31:29.332  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:29.346  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 14 milliseconds.
+2021-11-12 00:31:29.346  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:29.351  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:29.356  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:31:29.357  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:29.357  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployePrenomById : 
+2021-11-12 00:31:29.364  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 7 milliseconds.
+2021-11-12 00:31:29.364  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployePrenomById
+2021-11-12 00:31:29.365  INFO 7068 --- [main] tn.esprit.spring.EmployeServiceImplTest  : ------> Prenom de lemploye est : benromdhane
+2021-11-12 00:31:29.371  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:29.385  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 14 milliseconds.
+2021-11-12 00:31:29.386  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:29.391  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:29.399  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:31:29.399  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:29.400  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method mettreAjourEmailByEmployeId : 
+2021-11-12 00:31:29.422  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 22 milliseconds.
+2021-11-12 00:31:29.423  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :mettreAjourEmailByEmployeId
+2021-11-12 00:31:29.424  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:31:29.429  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 6 milliseconds.
+2021-11-12 00:31:29.430  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:31:29.431  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:29.445  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 14 milliseconds.
+2021-11-12 00:31:29.445  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:29.462  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEntreprise : 
+2021-11-12 00:31:29.478  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:31:29.478  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEntreprise
+2021-11-12 00:31:29.501  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveEntreprise : 
+2021-11-12 00:31:29.508  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 7 milliseconds.
+2021-11-12 00:31:29.508  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveEntreprise
+2021-11-12 00:31:29.514  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllEntreprises : 
+2021-11-12 00:31:29.551  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 37 milliseconds.
+2021-11-12 00:31:29.551  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllEntreprises
+2021-11-12 00:31:29.556  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:31:29.564  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:31:29.564  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:31:29.583  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllEmployeByMission : 
+2021-11-12 00:31:29.648  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 65 milliseconds.
+2021-11-12 00:31:29.648  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllEmployeByMission
+2021-11-12 00:31:29.654  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method addMission : 
+2021-11-12 00:31:29.664  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 10 milliseconds.
+2021-11-12 00:31:29.665  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :addMission
+2021-11-12 00:31:29.669  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllMission : 
+2021-11-12 00:31:29.677  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:31:29.678  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllMission
+2021-11-12 00:31:29.683  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : In method findAllMissionByEmployeJPQL : 
+2021-11-12 00:31:29.686  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:31:29.686  INFO 7068 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :findAllMissionByEmployeJPQL
+2021-11-12 00:31:45.677  INFO 6132 --- [main] tn.esprit.spring.ContratServiceImplTest  : Starting ContratServiceImplTest on DESKTOP-1R9K27T with PID 6132 (started by Asus in C:\WorkSTS\workspace-sts\DevOps-Timesheet)
+2021-11-12 00:31:45.681  INFO 6132 --- [main] tn.esprit.spring.ContratServiceImplTest  : No active profile set, falling back to default profiles: default
+2021-11-12 00:31:49.145  INFO 6132 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-12 00:31:49.374  INFO 6132 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2021-11-12 00:31:49.758  INFO 6132 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-11-12 00:31:50.828  INFO 6132 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-11-12 00:31:52.832  INFO 6132 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-12 00:31:55.952  WARN 6132 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-12 00:31:57.454  INFO 6132 --- [main] tn.esprit.spring.ContratServiceImplTest  : Started ContratServiceImplTest in 12.68 seconds (JVM running for 14.113)
+2021-11-12 00:31:57.749  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllContrats : 
+2021-11-12 00:31:57.770  INFO 6132 --- [main] t.e.spring.services.ContratServiceImpl   : In getAllContrats() : 
+2021-11-12 00:31:57.771  INFO 6132 --- [main] t.e.spring.services.ContratServiceImpl   : Out getAllContrats() 
+2021-11-12 00:31:57.936  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 184 milliseconds.
+2021-11-12 00:31:57.939  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllContrats
+2021-11-12 00:31:57.967  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterContrat : 
+2021-11-12 00:31:58.036  INFO 6132 --- [main] t.e.spring.services.ContratServiceImpl   : Contrat ajouter avec ref = 4
+2021-11-12 00:31:58.036  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 69 milliseconds.
+2021-11-12 00:31:58.036  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterContrat
+2021-11-12 00:31:58.056  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterDepartement : 
+2021-11-12 00:31:58.087  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 31 milliseconds.
+2021-11-12 00:31:58.088  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterDepartement
+2021-11-12 00:31:58.095  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartements : 
+2021-11-12 00:31:58.148  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 53 milliseconds.
+2021-11-12 00:31:58.149  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartements
+2021-11-12 00:31:58.156  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:31:58.164  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:31:58.164  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:31:58.185  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:58.211  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 26 milliseconds.
+2021-11-12 00:31:58.212  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:58.212  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:58.282  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 70 milliseconds.
+2021-11-12 00:31:58.282  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:58.283  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:31:58.288  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:31:58.289  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:31:58.447  INFO 6132 --- [main] tn.esprit.spring.EmployeServiceImplTest  : --->Employe deleted successfully!
+2021-11-12 00:31:58.454  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:58.461  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 7 milliseconds.
+2021-11-12 00:31:58.461  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:58.465  INFO 6132 --- [main] tn.esprit.spring.EmployeServiceImplTest  : Employe added successfully!
+2021-11-12 00:31:58.466  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:58.482  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:31:58.483  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:58.488  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:58.496  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 8 milliseconds.
+2021-11-12 00:31:58.497  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:58.497  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployePrenomById : 
+2021-11-12 00:31:58.504  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 7 milliseconds.
+2021-11-12 00:31:58.504  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployePrenomById
+2021-11-12 00:31:58.505  INFO 6132 --- [main] tn.esprit.spring.EmployeServiceImplTest  : ------> Prenom de lemploye est : benromdhane
+2021-11-12 00:31:58.511  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:58.527  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:31:58.528  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:58.532  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEmploye : 
+2021-11-12 00:31:58.537  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 5 milliseconds.
+2021-11-12 00:31:58.537  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEmploye
+2021-11-12 00:31:58.538  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method mettreAjourEmailByEmployeId : 
+2021-11-12 00:31:58.567  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 29 milliseconds.
+2021-11-12 00:31:58.568  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :mettreAjourEmailByEmployeId
+2021-11-12 00:31:58.568  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getEmployerById : 
+2021-11-12 00:31:58.580  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 12 milliseconds.
+2021-11-12 00:31:58.581  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getEmployerById
+2021-11-12 00:31:58.581  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method deleteEmployeById : 
+2021-11-12 00:31:58.597  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 16 milliseconds.
+2021-11-12 00:31:58.598  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :deleteEmployeById
+2021-11-12 00:31:58.620  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method ajouterEntreprise : 
+2021-11-12 00:31:58.641  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 21 milliseconds.
+2021-11-12 00:31:58.642  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :ajouterEntreprise
+2021-11-12 00:31:58.653  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveEntreprise : 
+2021-11-12 00:31:58.662  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 9 milliseconds.
+2021-11-12 00:31:58.663  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveEntreprise
+2021-11-12 00:31:58.667  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllEntreprises : 
+2021-11-12 00:31:58.715  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 48 milliseconds.
+2021-11-12 00:31:58.715  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllEntreprises
+2021-11-12 00:31:58.720  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllDepartementsNamesByEntreprise : 
+2021-11-12 00:31:58.724  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:31:58.725  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllDepartementsNamesByEntreprise
+2021-11-12 00:31:58.739  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method getAllEmployeByMission : 
+2021-11-12 00:31:58.841  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 102 milliseconds.
+2021-11-12 00:31:58.843  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :getAllEmployeByMission
+2021-11-12 00:31:58.854  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method addMission : 
+2021-11-12 00:31:58.875  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 21 milliseconds.
+2021-11-12 00:31:58.876  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :addMission
+2021-11-12 00:31:58.883  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method retrieveAllMission : 
+2021-11-12 00:31:58.895  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 12 milliseconds.
+2021-11-12 00:31:58.896  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :retrieveAllMission
+2021-11-12 00:31:58.903  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : In method findAllMissionByEmployeJPQL : 
+2021-11-12 00:31:58.907  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Method execution time: 4 milliseconds.
+2021-11-12 00:31:58.908  INFO 6132 --- [main] tn.esprit.spring.config.LoggingAspect    : Out of method  :findAllMissionByEmployeJPQL

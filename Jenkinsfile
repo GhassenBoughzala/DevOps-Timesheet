@@ -17,11 +17,18 @@ pipeline {
 				
 			stage('Sonar Analyse'){
 				steps{
-                    bat "mvn sonar:sonar"
-                  }
-            }
+					bat "mvn clean package"
+					
+				}				
+			}
 
-            stage('Nexus Deploy'){
+			stage('Sonar'){
+				steps{
+                   bat "mvn sonar:sonar"
+                }
+			} 
+
+			stage('Deploy'){
 				steps{
 					bat "mvn deploy"
 				}				
@@ -31,9 +38,9 @@ pipeline {
 				steps{
 					script{
 						dockerImage = docker.build registry + ":$BUILD_NUMBER"
-					}
-				}				
-			}
+			 		}
+			 	}				
+			 }
 
 			stage('Deploy Image'){
 				steps{

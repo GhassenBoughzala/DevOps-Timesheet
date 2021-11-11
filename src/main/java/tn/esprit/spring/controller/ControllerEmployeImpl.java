@@ -45,8 +45,6 @@ public class ControllerEmployeImpl  {
 	private String url="/login.xhtml?faces-redirect=true";
 
 	private Integer employeIdToBeUpdated;
-	@SuppressWarnings("unused")
-	private String Login = "/login.xhtml?faces-redirect=true";
 
 
 	public String doLogin() {
