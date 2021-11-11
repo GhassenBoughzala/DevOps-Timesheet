@@ -105,14 +105,6 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.codehaus.sonar/sonar-plugin-api -->
-		<dependency>
-		    <groupId>org.codehaus.sonar</groupId>
-		    <artifactId>sonar-plugin-api</artifactId>
-		    <version>4.5.2</version>
-		    <scope>provided</scope>
-		</dependency>
-		
 		<!-- JSF -->
 
 	</dependencies>
@@ -225,7 +217,7 @@
     </snapshotRepository>
     <repository>
       <id>nexus</id>
-      <url>http://localhost:8081/repository/maven-realses/</url>
+      <url>http://localhost:8081/repository/maven-releases/</url>
     </repository>
   </distributionManagement>
 

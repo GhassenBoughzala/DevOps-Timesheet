@@ -1,7 +1,4 @@
 package tn.esprit.spring.controller;
-
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -24,9 +21,7 @@ public class ControllerEntrepriseImpl{
 		ientrepriseservice.ajouterEntreprise(ssiiConsulting);
 		return ssiiConsulting.getId();
 	}
-	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
-		ientrepriseservice.affecterDepartementAEntreprise(depId, entrepriseId);
-	}
+
 	public void deleteEntrepriseById(int entrepriseId)
 	{
 		ientrepriseservice.deleteEntrepriseById(entrepriseId);
