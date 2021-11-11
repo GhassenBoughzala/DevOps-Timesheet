@@ -149,10 +149,7 @@ public class DepartementServiceImpl implements IDepartementService {
 		return new ArrayList<>();
 		}
 	}
-	
 
-	
-	
 
 	
 

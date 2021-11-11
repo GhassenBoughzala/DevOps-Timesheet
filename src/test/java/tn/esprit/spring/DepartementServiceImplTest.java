@@ -29,7 +29,7 @@ public class DepartementServiceImplTest {
 
 	@Test
 	public void ajouterDepartementTest()  {
-		Departement dep =new Departement("info");
+		Departement dep =new Departement("génie civile");
 	int a=es.ajouterDepartement(dep);
 	assertEquals(dep.getId(),a);
 	
@@ -37,12 +37,18 @@ public class DepartementServiceImplTest {
 	
 	@Test
 	public void getAllDepartementsNamesByEntrepriseTest1()  {
-	List<String> names=es.getAllDepartementsNamesByEntreprise(7000);
+	List<String> names=es.getAllDepartementsNamesByEntreprise(1);
 	assertNotNull(names);
 	}
 	
 	
 	
+	@Test
+	public void testRetrieveAlllistEntreprises() {
+		List<Departement> listDepartement = es.getAllDepartements(); 
+		// if there are 7 users in DB : 
+		assertNotNull(listDepartement);
+	}
 	
 	
 }
