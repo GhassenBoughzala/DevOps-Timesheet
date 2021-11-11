@@ -45,31 +45,22 @@ public class EntrepriseServiceImplTest {
 
 	@Test
 	public void testGetAllDepartementsNamesByEntreprise() {
-		
+		 l.debug("methode GetAllDepartementNAmesByEntreprise");
 		List<String> depNames = ientrepriseservice.getAllDepartementsNamesByEntreprise(1);
 		assertNotNull(depNames);
 	}	
 	
-	@Test
-	public void testDeleteEntrepriseById()
-	{
-		if(idE!=null){
-		int i = ientrepriseservice.deleteEntrepriseById(idE);
-		
-		assertEquals(0, i);}
-		else {
-			int i = ientrepriseservice.deleteEntrepriseById(22);
-			
-			assertEquals(0, i);}
-	}
+
 	@Test
 	public void testRetrieveAlllistEntreprises() {
+		l.debug("methode testRetrieveAlllistEntreprises");
 		List<Entreprise> listEntreprises = ientrepriseservice.retrieveAllEntreprises(); 
 		assertNotNull(listEntreprises);
 	}
 	
 	@Test
 	public void testRetrieveEntreprise() {
+		l.debug("methode testRetrieveAlllistEntreprises");
 		Entreprise entrepriseRetrieved = ientrepriseservice.retrieveEntreprise("1"); 
 		assertEquals(1L, entrepriseRetrieved.getId());
 	}
