@@ -44,4 +44,17 @@ public class ContratServiceImplTest {
 	}
 	
 	
+	/*@Test
+	public void testAffecterContratAEmploye() {
+		int employeId = 1 ;
+		int idC = 6; 
+		Contrat C = contratRepository.findById(idC).orElse(null);
+		Employe Emp = employeRepository.findById(employeId).orElse(null);
+		if (C != null){
+		C.setEmploye(Emp);
+		Contrat c = cs.affecterContratAEmploye(idC, employeId);
+		Assert.assertEquals (C.getEmploye().getId(),c.getEmploye().getId());
+		}	
+	}*/
+	
 }
