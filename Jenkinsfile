@@ -1,5 +1,4 @@
-pipeline {	
-
+pipeline {
 	agent any 
 	
 	environment { 
@@ -7,6 +6,7 @@ pipeline {
         registryCredential = 'dockerHub'
         dockerImage = '' 
     }
+
 
 	stages{
 			
@@ -50,4 +50,3 @@ pipeline {
 			
 		}
 	} 
-
