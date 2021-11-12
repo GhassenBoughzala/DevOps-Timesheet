@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
-	<version>3.0.1-SNAPSHOT</version>
+	<version>3.3.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>timesheet</name>
 	<description>timesheet</description>
@@ -167,25 +167,28 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
-		<plugin> 
-
-                <!-- Building an executable jar -->
-
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                  <archive>
-                    <manifest>
-
-                    	<addClasspath>true</addClasspath>
-            		  	<classpathPrefix>lib/</classpathPrefix>
-                      	<mainClass>tn.esprit.spring.TimesheetApplication</mainClass>
-
-                    </manifest>
-                  </archive>
-                </configuration>
-    	</plugin>
+    	<plugin>
+		    <artifactId>maven-assembly-plugin</artifactId>
+		    <executions>
+		      <execution>
+		        <phase>package</phase>
+		        <goals>
+		          <goal>single</goal>
+		        </goals>
+		      </execution>
+		    </executions>
+		    <configuration>
+		      <archive>
+		        <manifest>
+		          <addClasspath>true</addClasspath>
+		          <mainClass>tn.esprit.spring.TimesheetApplication</mainClass>
+		        </manifest>
+		      </archive>
+		      <descriptorRefs>
+		        <descriptorRef>jar-with-dependencies</descriptorRef>
+		      </descriptorRefs>
+		    </configuration>
+		 </plugin> 
 
     	<plugin>
 			<groupId>com.spotify</groupId>
