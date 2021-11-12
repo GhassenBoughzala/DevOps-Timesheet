@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
-	<version>2.2.0-SNAPSHOT</version>
+	<version>4.3</version>
+	<packaging>war</packaging>
 	<name>timesheet</name>
 	<description>timesheet</description>
 
@@ -160,17 +161,63 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.19.1</version>
         </plugin>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+    	<plugin>
+		    <artifactId>maven-assembly-plugin</artifactId>
+		    <executions>
+		      <execution>
+		        <phase>package</phase>
+		        <goals>
+		          <goal>single</goal>
+		        </goals>
+		      </execution>
+		    </executions>
+		    <configuration>
+		      <archive>
+		        <manifest>
+		          <addClasspath>true</addClasspath>
+		          <mainClass>tn.esprit.spring.TimesheetApplication</mainClass>
+		        </manifest>
+		      </archive>
+		      <descriptorRefs>
+		        <descriptorRef>jar-with-dependencies</descriptorRef>
+		      </descriptorRefs>
+		    </configuration>
+		 </plugin> 
+
+    	<plugin>
+			<groupId>com.spotify</groupId>
+			<artifactId>docker-maven-plugin</artifactId>
+			<version>1.0.0</version>
+			<configuration>
+				<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+				<dockerDirectory>src/main/docker</dockerDirectory>
+				<resources>
+					<resource>
+						<targetPath>/</targetPath>
+						<directory>${project.build.directory}</directory>
+						<include>${project.build.finalName}.jar</include>
+					</resource>
+				</resources>
+			</configuration>
+		</plugin>
+
+
+
       </plugins>
     </pluginManagement>
   </build>
   <distributionManagement>
     <snapshotRepository>
-      <id>snapshots</id>
-      <url>http://localhost:8081/repository/snapshots/</url>
+      <id>nexus</id>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>releases</id>
-      <url>http://localhost:8081/repository/realses/</url>
+      <id>nexus</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
     </repository>
   </distributionManagement>
 
