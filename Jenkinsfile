@@ -13,7 +13,6 @@ pipeline {
 			stage('Clean Package Test'){
 					steps{
 						bat "mvn clean package"
-						bat "mvn test"
 					}				
 				}
 				
