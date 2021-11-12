@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.1.RELEASE</version>
-		<relativePath /> <!-- Validation -->
+		<relativePath /> <!-- Validation2 -->
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
