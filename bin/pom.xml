@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
-	<version>4.2</version>
+	<version>4.14.3-SNAPSHOT</version>
 	<name>timesheet</name>
 	<description>timesheet</description>
 
