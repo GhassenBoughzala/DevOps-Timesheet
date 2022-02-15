@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:latest
+FROM openjdk:11
 EXPOSE 8088
-ADD target/timesheet4.14.4-SNAPSHOT.war timesheet4.14.4-SNAPSHOT.war
-ENTRYPOINT ["java", "-jar", "/timesheet4.14.4-SNAPSHOT.war" ]
+ADD target/timesheet-4.14.4-SNAPSHOT.jar timesheet-4.14.4-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/timesheet-4.14.4-SNAPSHOT.jar" ]
